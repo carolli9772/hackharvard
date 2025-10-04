@@ -29,6 +29,7 @@ pip install -r requirements.txt
 ```
 
 **Required packages:**
+
 - pandas, numpy
 - scipy, scikit-learn
 - networkx
@@ -40,6 +41,7 @@ pip install -r requirements.txt
 ## Step 3: Run the Analysis Pipeline
 
 ### Option A: Fast Mode (Recommended for Testing)
+
 ```bash
 cd app
 python run_pipeline.py
@@ -48,6 +50,7 @@ python run_pipeline.py
 **Runs in ~3-5 minutes** (skips proximity index)
 
 ### Option B: Full Analysis
+
 ```bash
 python run_pipeline.py --full
 ```
@@ -55,6 +58,7 @@ python run_pipeline.py --full
 **Runs in ~10-20 minutes** (includes proximity index)
 
 **What happens:**
+
 1. ✅ Enhanced dark event detection
 2. ✅ Vessel proximity indexing (full mode only)
 3. ✅ Context validation
@@ -74,6 +78,7 @@ python api.py
 **Server starts on:** `http://localhost:5000`
 
 **Test it:**
+
 ```bash
 curl http://localhost:5000/api/health
 ```
@@ -82,12 +87,21 @@ curl http://localhost:5000/api/health
 
 ## Step 5: Open the Dashboard
 
+### Run frontend by npm (will be on local host : 3000)
+
+```bash
+cd frontend
+npm run dev
+```
+
 ### Option A: Direct Open
+
 ```bash
 open ../frontend/example_dashboard.html
 ```
 
 ### Option B: Serve with Python
+
 ```bash
 cd ../frontend
 python -m http.server 8000
@@ -99,7 +113,9 @@ python -m http.server 8000
 ## 🎯 What You'll See
 
 ### Dashboard Shows:
+
 - 📊 **Summary Statistics**
+
   - Total dark events
   - High suspicion events
   - Fishing vessel count
@@ -107,6 +123,7 @@ python -m http.server 8000
   - Potential motherships
 
 - ⚠️ **Top Suspicious Events**
+
   - Filterable by suspicion level
   - Fishing vessels only option
   - Score, location, duration
@@ -120,26 +137,31 @@ python -m http.server 8000
 ## 📊 Using the API
 
 ### Get Summary
+
 ```bash
 curl http://localhost:5000/api/summary
 ```
 
 ### Get Suspicious Events (High Suspicion Only)
+
 ```bash
 curl "http://localhost:5000/api/suspicious-events?min_score=0.7&limit=10"
 ```
 
 ### Get Dark Zone Hotspots
+
 ```bash
 curl "http://localhost:5000/api/hotspots?limit=20"
 ```
 
 ### Search Near Location
+
 ```bash
 curl "http://localhost:5000/api/search?lat=15.2&lon=-88.0&radius_km=50"
 ```
 
 ### Get Vessel Details
+
 ```bash
 curl http://localhost:5000/api/vessel/367305420
 ```
@@ -151,6 +173,7 @@ curl http://localhost:5000/api/vessel/367305420
 After running the pipeline, find these files in `/backend/app/`:
 
 ### JSON Data Files
+
 ```
 enhanced_dark_events.json          # Dark events with metadata
 contextualized_dark_events.json    # With coverage context
@@ -165,6 +188,7 @@ dataset_analysis.json              # Gear type analysis
 ```
 
 ### Visualizations
+
 ```
 suspicion_heatmap.png             # Geographic heatmap
 network_viz.png                   # Network graphs
@@ -172,6 +196,7 @@ temporal_analysis.png             # Temporal patterns
 ```
 
 ### Network Graph
+
 ```
 vessel_network.gexf               # For Gephi/Cytoscape
 ```
@@ -183,14 +208,18 @@ vessel_network.gexf               # For Gephi/Cytoscape
 Edit these parameters in the scripts:
 
 ### Dark Event Threshold
+
 **File:** `enhanced_dark_detection.py`
+
 ```python
 dark_events = detect_enhanced_dark_events(df, threshold_minutes=10)
 # Change to 15, 20, 30 minutes, etc.
 ```
 
 ### Proximity Distance
+
 **File:** `proximity_index.py`
+
 ```python
 proximity_events = build_proximity_index(
     df,
@@ -200,7 +229,9 @@ proximity_events = build_proximity_index(
 ```
 
 ### Clustering Radius
+
 **File:** `suspicion_scoring.py`
+
 ```python
 clustered_events, cluster_summary = cluster_dark_zones(
     scored_events,
@@ -214,25 +245,32 @@ clustered_events, cluster_summary = cluster_dark_zones(
 ## 🐛 Troubleshooting
 
 ### Error: "Module not found"
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Error: "File not found" during pipeline
+
 Make sure AIS data exists:
+
 ```bash
 ls ../../datasets/AIS_2024_01_01.csv
 ```
 
 ### API returns 404 errors
+
 1. Check if `frontend_data_package.json` exists
 2. Re-run the pipeline: `python run_pipeline.py`
 
 ### Frontend shows "CORS error"
+
 Make sure API is running with CORS enabled (already configured in `api.py`)
 
 ### Pipeline is too slow
+
 Use fast mode:
+
 ```bash
 python run_pipeline.py  # Default is fast
 ```
@@ -242,10 +280,13 @@ python run_pipeline.py  # Default is fast
 ## 📚 Next Steps
 
 ### 1. **Explore the API**
+
 See all endpoints: `/backend/README.md`
 
 ### 2. **Customize Scoring**
+
 Edit weights in `suspicion_scoring.py`:
+
 ```python
 duration_score = min(event['duration_hours'] / 6.0, 1.0) * 0.3  # Change 0.3
 coverage_score = (1 - event.get('coverage_reliability', 0.5)) * 0.2  # Change 0.2
@@ -253,34 +294,38 @@ coverage_score = (1 - event.get('coverage_reliability', 0.5)) * 0.2  # Change 0.
 ```
 
 ### 3. **Add Map Visualization**
+
 Integrate Leaflet.js or deck.gl in `example_dashboard.html`:
+
 ```javascript
 // Use hexbin_data from API to render heatmap
-fetch('http://localhost:5000/api/hotspots')
-  .then(res => res.json())
-  .then(data => {
+fetch("http://localhost:5000/api/hotspots")
+  .then((res) => res.json())
+  .then((data) => {
     // Render on map
   });
 ```
 
 ### 4. **Build Custom Frontend**
+
 Use React, Vue, or your framework of choice:
+
 ```javascript
 // Example with React
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 function Dashboard() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/suspicious-events?limit=50')
-      .then(res => res.json())
-      .then(data => setEvents(data.events));
+    fetch("http://localhost:5000/api/suspicious-events?limit=50")
+      .then((res) => res.json())
+      .then((data) => setEvents(data.events));
   }, []);
 
   return (
     <div>
-      {events.map(event => (
+      {events.map((event) => (
         <EventCard key={event.mmsi} event={event} />
       ))}
     </div>
@@ -289,6 +334,7 @@ function Dashboard() {
 ```
 
 ### 5. **Deploy to Production**
+
 ```bash
 # Use gunicorn for production
 pip install gunicorn
