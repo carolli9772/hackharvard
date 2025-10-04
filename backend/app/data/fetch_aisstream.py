@@ -8,7 +8,7 @@ load_dotenv()
 AIS_URL = "wss://stream.aisstream.io/v0/stream"
 AISSTREAM_API_KEY = os.getenv("AISSTREAM_API_KEY")
 
-OUT_CSV = Path("data/raw/aisstream_live.csv") 
+OUT_CSV = Path("datasets/aisstream_live.csv") 
 OUT_CSV.parent.mkdir(parents=True, exist_ok=True) 
 CSV_FIELDS = [ "mmsi","ship_name","timestamp","lat","lon","sog","cog","nav_status","raw_json" ]
 
