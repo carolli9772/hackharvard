@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishNet - Illegal Fishing Detection Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #aaa;
+            font-size: 1.2em;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #00ff88;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            color: #aaa;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #00d4ff;
+        }
+
+        .event-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .event-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #ff6b6b;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .event-item.high-suspicion {
+            border-left-color: #ff3838;
+        }
+
+        .event-item.medium-suspicion {
+            border-left-color: #ffa500;
+        }
+
+        .event-item.low-suspicion {
+            border-left-color: #4ecdc4;
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .mmsi {
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .score {
+            background: rgba(255, 59, 48, 0.3);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.9em;
+        }
+
+        .event-details {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            color: #aaa;
+        }
+
+        .error {
+            background: rgba(255, 59, 48, 0.2);
+            border: 1px solid #ff3b30;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(0, 212, 255, 0.2);
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #00d4ff;
+            color: #0f2027;
+        }
+
+        .map-placeholder {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎣 FishNet</h1>
+            <p class="subtitle">Illegal Fishing Detection via AIS Silence Patterns</p>
+        </header>
+
+        <div class="stats-grid" id="stats-grid">
+            <div class="loading">Loading statistics...</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🗺️ Suspicious Dark Zone Heatmap</h2>
+            <div class="map-placeholder">
+                Map visualization (integrate with Leaflet, Mapbox, or deck.gl)
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">⚠️ Top Suspicious Events</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" onclick="filterEvents('all')">All</button>
+                <button class="filter-btn" onclick="filterEvents('high')">High Suspicion</button>
+                <button class="filter-btn" onclick="filterEvents('fishing')">Fishing Vessels Only</button>
+            </div>
+            <div class="event-list" id="event-list">
+                <div class="loading">Loading events...</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🌐 Vessel Networks & Communities</h2>
+            <div id="communities-list">
+                <div class="loading">Loading communities...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:5000/api';
+        let allEvents = [];
+
+        // Load summary statistics
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API_BASE}/summary`);
+                const data = await response.json();
+
+                const statsHtml = `
+                    <div class="stat-card">
+                        <div class="stat-label">Total Dark Events</div>
+                        <div class="stat-value">${data.total_dark_events?.toLocaleString() || 'N/A'}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">High Suspicion Events</div>
+                        <div class="stat-value">${data.high_suspicion_events?.toLocaleString() || 'N/A'}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Fishing Vessels</div>
+                        <div class="stat-value">${data.fishing_vessel_events?.toLocaleString() || 'N/A'}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Suspicious Communities</div>
+                        <div class="stat-value">${data.suspicious_communities?.toLocaleString() || 'N/A'}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Potential Motherships</div>
+                        <div class="stat-value">${data.potential_motherships?.toLocaleString() || 'N/A'}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Avg Duration</div>
+                        <div class="stat-value">${data.avg_duration_hours?.toFixed(1) || 'N/A'}h</div>
+                    </div>
+                `;
+
+                document.getElementById('stats-grid').innerHTML = statsHtml;
+            } catch (error) {
+                document.getElementById('stats-grid').innerHTML = `
+                    <div class="error">Error loading statistics. Make sure the API server is running.</div>
+                `;
+            }
+        }
+
+        // Load suspicious events
+        async function loadEvents() {
+            try {
+                const response = await fetch(`${API_BASE}/suspicious-events?limit=50`);
+                const data = await response.json();
+                allEvents = data.events || [];
+                renderEvents(allEvents);
+            } catch (error) {
+                document.getElementById('event-list').innerHTML = `
+                    <div class="error">Error loading events. Make sure the API server is running.</div>
+                `;
+            }
+        }
+
+        // Render events
+        function renderEvents(events) {
+            if (!events || events.length === 0) {
+                document.getElementById('event-list').innerHTML = '<div class="loading">No events found</div>';
+                return;
+            }
+
+            const eventsHtml = events.map(event => {
+                const score = event.total_score || 0;
+                const suspicionClass = score >= 0.7 ? 'high-suspicion' : score >= 0.4 ? 'medium-suspicion' : 'low-suspicion';
+                const location = event.location ? `[${event.location[0].toFixed(2)}, ${event.location[1].toFixed(2)}]` : 'Unknown';
+
+                return `
+                    <div class="event-item ${suspicionClass}">
+                        <div class="event-header">
+                            <span class="mmsi">MMSI: ${event.mmsi}</span>
+                            <span class="score">Score: ${score.toFixed(3)}</span>
+                        </div>
+                        <div class="event-details">
+                            📍 ${location} | ⏱️ ${event.duration_hours?.toFixed(1)}h |
+                            ${event.is_fishing_vessel ? '🎣 Fishing Vessel' : '🚢 Other Vessel'} |
+                            📅 ${new Date(event.start).toLocaleDateString()}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('event-list').innerHTML = eventsHtml;
+        }
+
+        // Filter events
+        function filterEvents(type) {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            let filtered = allEvents;
+
+            if (type === 'high') {
+                filtered = allEvents.filter(e => (e.total_score || 0) >= 0.7);
+            } else if (type === 'fishing') {
+                filtered = allEvents.filter(e => e.is_fishing_vessel);
+            }
+
+            renderEvents(filtered);
+        }
+
+        // Load communities
+        async function loadCommunities() {
+            try {
+                const response = await fetch(`${API_BASE}/communities?limit=5`);
+                const data = await response.json();
+
+                const communitiesHtml = data.communities.map(comm => `
+                    <div class="event-item">
+                        <div class="event-header">
+                            <span class="mmsi">Community ${comm.community_id}</span>
+                            <span class="score">Avg Score: ${comm.avg_suspicion_score?.toFixed(3)}</span>
+                        </div>
+                        <div class="event-details">
+                            👥 ${comm.vessel_count} vessels | 🎣 ${comm.fishing_vessel_count} fishing vessels |
+                            🔗 ${comm.internal_connections} connections
+                        </div>
+                    </div>
+                `).join('');
+
+                document.getElementById('communities-list').innerHTML = communitiesHtml || '<div class="loading">No communities found</div>';
+            } catch (error) {
+                document.getElementById('communities-list').innerHTML = `
+                    <div class="error">Error loading communities</div>
+                `;
+            }
+        }
+
+        // Initialize dashboard
+        async function init() {
+            await loadStats();
+            await loadEvents();
+            await loadCommunities();
+        }
+
+        // Load on page ready
+        init();
+    </script>
+</body>
+</html>
