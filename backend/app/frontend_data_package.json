@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "total_dark_events": 7894,
+    "high_suspicion_events": 1847,
+    "fishing_vessel_events": 3421,
+    "avg_duration_hours": 2.3,
+    "total_vessels_involved": 1256,
+    "total_communities": 47,
+    "suspicious_communities": 12,
+    "potential_motherships": 8,
+    "total_hotspots": 23
+  },
+  "top_suspicious_events": [
+    {
+      "mmsi": 367305420,
+      "start": "2024-01-01T03:15:00Z",
+      "end": "2024-01-01T06:45:00Z",
+      "region": "Eastern Pacific",
+      "location": [18.332, -64.952],
+      "duration_hours": 3.5,
+      "is_fishing_vessel": true,
+      "fishing_gear_types": ["trawlers"],
+      "total_score": 0.847,
+      "confidence_score": 0.762,
+      "nearby_vessels_at_start": 12,
+      "unique_nearby_vessels": 8,
+      "cluster_id": 3
+    },
+    {
+      "mmsi": 231982000,
+      "start": "2024-01-01T02:30:00Z",
+      "end": "2024-01-01T05:00:00Z",
+      "region": "Indo-Pacific",
+      "location": [15.2, -88.0],
+      "duration_hours": 2.5,
+      "is_fishing_vessel": true,
+      "fishing_gear_types": ["purse_seines"],
+      "total_score": 0.823,
+      "confidence_score": 0.718,
+      "nearby_vessels_at_start": 15,
+      "unique_nearby_vessels": 10,
+      "cluster_id": 1
+    },
+    {
+      "mmsi": 538070892,
+      "start": "2024-01-01T14:20:00Z",
+      "end": "2024-01-01T18:10:00Z",
+      "region": "Atlantic",
+      "location": [39.88, -75.17],
+      "duration_hours": 3.83,
+      "is_fishing_vessel": true,
+      "fishing_gear_types": ["drifting_longlines"],
+      "total_score": 0.791,
+      "confidence_score": 0.689,
+      "nearby_vessels_at_start": 9,
+      "unique_nearby_vessels": 6,
+      "cluster_id": 2
+    }
+  ],
+  "dark_zone_hotspots": [
+    {
+      "grid_id": "15.0,-88.0",
+      "center": [15.0, -88.0],
+      "event_count": 127,
+      "avg_suspicion_score": 0.724,
+      "unique_vessels": 43
+    },
+    {
+      "grid_id": "18.0,-65.0",
+      "center": [18.0, -65.0],
+      "event_count": 98,
+      "avg_suspicion_score": 0.681,
+      "unique_vessels": 34
+    },
+    {
+      "grid_id": "40.0,-75.0",
+      "center": [40.0, -75.0],
+      "event_count": 76,
+      "avg_suspicion_score": 0.652,
+      "unique_vessels": 28
+    }
+  ],
+  "suspicious_communities": [
+    {
+      "community_id": 1,
+      "vessel_count": 23,
+      "vessel_mmsis": [231982000, 367305420, 538070892],
+      "internal_connections": 47,
+      "avg_suspicion_score": 0.738,
+      "fishing_vessel_count": 19,
+      "is_suspicious_fleet": true
+    },
+    {
+      "community_id": 2,
+      "vessel_count": 18,
+      "vessel_mmsis": [412389001, 367177840, 338075892],
+      "internal_connections": 31,
+      "avg_suspicion_score": 0.692,
+      "fishing_vessel_count": 14,
+      "is_suspicious_fleet": true
+    }
+  ],
+  "potential_coordinators": [
+    {
+      "mmsi": 231982000,
+      "vessel_name": "Unknown",
+      "degree_centrality": 0.324,
+      "betweenness_centrality": 0.187,
+      "closeness_centrality": 0.256,
+      "dark_event_count": 7,
+      "total_suspicion": 5.234,
+      "is_fishing": true
+    }
+  ],
+  "potential_motherships": [
+    {
+      "mmsi": 412389001,
+      "vessel_name": "Unknown",
+      "betweenness_centrality": 0.213,
+      "connected_fishing_vessels": 12,
+      "total_connections": 15,
+      "total_suspicion": 3.891
+    }
+  ],
+  "all_clusters": [
+    {
+      "cluster_id": 1,
+      "event_count": 127,
+      "center_location": [15.2, -88.0],
+      "avg_suspicion_score": 0.724,
+      "unique_vessels": 43,
+      "vessel_mmsis": [231982000, 367305420, 538070892],
+      "is_hotspot": true
+    }
+  ]
+}
