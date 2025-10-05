@@ -1,136 +1,2994 @@
 {
   "summary": {
-    "total_dark_events": 7894,
-    "high_suspicion_events": 1847,
-    "fishing_vessel_events": 3421,
-    "avg_duration_hours": 2.3,
-    "total_vessels_involved": 1256,
-    "total_communities": 47,
-    "suspicious_communities": 12,
-    "potential_motherships": 8,
-    "total_hotspots": 23
+    "total_dark_events": 81962,
+    "high_suspicion_events": 71,
+    "fishing_vessel_events": 0,
+    "avg_duration_hours": 0.49,
+    "total_vessels_involved": 7742,
+    "total_communities": 7742,
+    "suspicious_communities": 0,
+    "potential_motherships": 0,
+    "total_hotspots": 73
   },
   "top_suspicious_events": [
     {
-      "mmsi": 367305420,
-      "start": "2024-01-01T03:15:00Z",
-      "end": "2024-01-01T06:45:00Z",
-      "region": "Eastern Pacific",
-      "location": [18.332, -64.952],
-      "duration_hours": 3.5,
-      "is_fishing_vessel": true,
-      "fishing_gear_types": ["trawlers"],
-      "total_score": 0.847,
-      "confidence_score": 0.762,
-      "nearby_vessels_at_start": 12,
-      "unique_nearby_vessels": 8,
-      "cluster_id": 3
+      "mmsi": 367143380,
+      "start": "2024-01-01T00:43:20",
+      "end": "2024-01-01T13:09:00",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.50911,
+        -88.0964
+      ],
+      "start_location": [
+        41.5091,
+        -88.0964
+      ],
+      "end_location": [
+        41.50912,
+        -88.0964
+      ],
+      "duration_hours": 12.43,
+      "vessel_name": "MICHAEL POINDEXTER",
+      "vessel_type": 52.0,
+      "vessel_length": 46.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.43,
+      "confidence_score": 0.43,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.794,
+      "duration_score": 0.3,
+      "coverage_score": 0.114,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 0
     },
     {
-      "mmsi": 231982000,
-      "start": "2024-01-01T02:30:00Z",
-      "end": "2024-01-01T05:00:00Z",
-      "region": "Indo-Pacific",
-      "location": [15.2, -88.0],
-      "duration_hours": 2.5,
-      "is_fishing_vessel": true,
-      "fishing_gear_types": ["purse_seines"],
-      "total_score": 0.823,
-      "confidence_score": 0.718,
-      "nearby_vessels_at_start": 15,
-      "unique_nearby_vessels": 10,
+      "mmsi": 367662390,
+      "start": "2024-01-01T02:16:51",
+      "end": "2024-01-01T08:27:32",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.829085,
+        -82.15644
+      ],
+      "start_location": [
+        38.82907,
+        -82.1564
+      ],
+      "end_location": [
+        38.8291,
+        -82.15648
+      ],
+      "duration_hours": 6.18,
+      "vessel_name": "EARL FRANKLIN",
+      "vessel_type": 31.0,
+      "vessel_length": 15.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.43,
+      "confidence_score": 0.43,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.794,
+      "duration_score": 0.3,
+      "coverage_score": 0.114,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
       "cluster_id": 1
     },
     {
-      "mmsi": 538070892,
-      "start": "2024-01-01T14:20:00Z",
-      "end": "2024-01-01T18:10:00Z",
-      "region": "Atlantic",
-      "location": [39.88, -75.17],
-      "duration_hours": 3.83,
-      "is_fishing_vessel": true,
-      "fishing_gear_types": ["drifting_longlines"],
-      "total_score": 0.791,
-      "confidence_score": 0.689,
-      "nearby_vessels_at_start": 9,
-      "unique_nearby_vessels": 6,
+      "mmsi": 368188920,
+      "start": "2024-01-01T01:51:59",
+      "end": "2024-01-01T11:55:19",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        40.62385999999999,
+        -80.60241500000001
+      ],
+      "start_location": [
+        40.62385,
+        -80.6036
+      ],
+      "end_location": [
+        40.62387,
+        -80.60123
+      ],
+      "duration_hours": 10.06,
+      "vessel_name": "ZEPHYR",
+      "vessel_type": 57.0,
+      "vessel_length": 25.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.44,
+      "confidence_score": 0.44,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.792,
+      "duration_score": 0.3,
+      "coverage_score": 0.112,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
       "cluster_id": 2
+    },
+    {
+      "mmsi": 366967590,
+      "start": "2024-01-01T12:05:37",
+      "end": "2024-01-01T21:05:37",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.833085,
+        -90.106695
+      ],
+      "start_location": [
+        38.83309,
+        -90.10669
+      ],
+      "end_location": [
+        38.83308,
+        -90.1067
+      ],
+      "duration_hours": 9.0,
+      "vessel_name": "DANIEL P MECKLENBORG",
+      "vessel_type": 52.0,
+      "vessel_length": 44.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.47,
+      "confidence_score": 0.47,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.786,
+      "duration_score": 0.3,
+      "coverage_score": 0.106,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 3
+    },
+    {
+      "mmsi": 338230535,
+      "start": "2024-01-01T09:41:35",
+      "end": "2024-01-01T18:45:57",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        37.911834999999996,
+        -122.34682000000001
+      ],
+      "start_location": [
+        37.91186,
+        -122.3468
+      ],
+      "end_location": [
+        37.91181,
+        -122.34684
+      ],
+      "duration_hours": 9.07,
+      "vessel_name": "ORION",
+      "vessel_type": 36.0,
+      "vessel_length": 14.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.48,
+      "confidence_score": 0.48,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.784,
+      "duration_score": 0.3,
+      "coverage_score": 0.104,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 4
+    },
+    {
+      "mmsi": 367617020,
+      "start": "2024-01-01T09:56:10",
+      "end": "2024-01-01T16:09:21",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.814814999999996,
+        -71.400125
+      ],
+      "start_location": [
+        41.81481,
+        -71.40012
+      ],
+      "end_location": [
+        41.81482,
+        -71.40013
+      ],
+      "duration_hours": 6.22,
+      "vessel_name": "BUCKLEY MCALLISTER",
+      "vessel_type": 52.0,
+      "vessel_length": 30.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.48,
+      "confidence_score": 0.48,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.784,
+      "duration_score": 0.3,
+      "coverage_score": 0.104,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 367635760,
+      "start": "2024-01-01T16:36:06",
+      "end": "2024-01-01T23:34:05",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        44.00401,
+        -124.579835
+      ],
+      "start_location": [
+        44.09709,
+        -124.62675
+      ],
+      "end_location": [
+        43.91093,
+        -124.53292
+      ],
+      "duration_hours": 6.97,
+      "vessel_name": "STORMIE C",
+      "vessel_type": 30.0,
+      "vessel_length": 20.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.48,
+      "confidence_score": 0.48,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.784,
+      "duration_score": 0.3,
+      "coverage_score": 0.104,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 6
+    },
+    {
+      "mmsi": 366951240,
+      "start": "2024-01-01T14:37:02",
+      "end": "2024-01-01T22:16:32",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        36.00188,
+        -89.7046
+      ],
+      "start_location": [
+        35.89408,
+        -89.76673
+      ],
+      "end_location": [
+        36.10968,
+        -89.64247
+      ],
+      "duration_hours": 7.66,
+      "vessel_name": "MARTHA INGRAM",
+      "vessel_type": 31.0,
+      "vessel_length": 489.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.44,
+      "confidence_score": 0.44,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.782,
+      "duration_score": 0.3,
+      "coverage_score": 0.112,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.09,
+      "is_highly_suspicious": true,
+      "cluster_id": 7
+    },
+    {
+      "mmsi": 338446637,
+      "start": "2024-01-01T18:20:17",
+      "end": "2024-01-01T23:53:09",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        42.594165000000004,
+        -82.790895
+      ],
+      "start_location": [
+        42.59416,
+        -82.79089
+      ],
+      "end_location": [
+        42.59417,
+        -82.7909
+      ],
+      "duration_hours": 5.55,
+      "vessel_name": "ARCH ANGEL",
+      "vessel_type": 36.0,
+      "vessel_length": 13.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.38,
+      "confidence_score": 0.38,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.781,
+      "duration_score": 0.277,
+      "coverage_score": 0.124,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 8
+    },
+    {
+      "mmsi": 367662390,
+      "start": "2024-01-01T10:55:12",
+      "end": "2024-01-01T16:21:21",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.829025,
+        -82.156375
+      ],
+      "start_location": [
+        38.82908,
+        -82.15636
+      ],
+      "end_location": [
+        38.82897,
+        -82.15639
+      ],
+      "duration_hours": 5.44,
+      "vessel_name": "EARL FRANKLIN",
+      "vessel_type": 31.0,
+      "vessel_length": 15.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.37,
+      "confidence_score": 0.37,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.778,
+      "duration_score": 0.272,
+      "coverage_score": 0.126,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 1
+    },
+    {
+      "mmsi": 368312940,
+      "start": "2024-01-01T17:28:53",
+      "end": "2024-01-01T23:59:52",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.63137,
+        -70.91944
+      ],
+      "start_location": [
+        41.63137,
+        -70.91944
+      ],
+      "end_location": [
+        41.63137,
+        -70.91944
+      ],
+      "duration_hours": 6.52,
+      "vessel_name": "REBEKAH",
+      "vessel_type": 31.0,
+      "vessel_length": 24.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.51,
+      "confidence_score": 0.51,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.778,
+      "duration_score": 0.3,
+      "coverage_score": 0.098,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 368256970,
+      "start": "2024-01-01T09:56:33",
+      "end": "2024-01-01T15:32:43",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        44.429265,
+        -69.004925
+      ],
+      "start_location": [
+        44.42926,
+        -69.00491
+      ],
+      "end_location": [
+        44.42927,
+        -69.00494
+      ],
+      "duration_hours": 5.6,
+      "vessel_name": "FOURNIER GIRLS",
+      "vessel_type": 31.0,
+      "vessel_length": 33.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.42,
+      "confidence_score": 0.42,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.776,
+      "duration_score": 0.28,
+      "coverage_score": 0.116,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 9
+    },
+    {
+      "mmsi": 368200880,
+      "start": "2024-01-01T08:18:38",
+      "end": "2024-01-01T15:20:01",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        35.685675,
+        -89.95346
+      ],
+      "start_location": [
+        35.68517,
+        -89.95283
+      ],
+      "end_location": [
+        35.68618,
+        -89.95409
+      ],
+      "duration_hours": 7.02,
+      "vessel_name": "GEORGE LEAVELL SR.",
+      "vessel_type": 56.0,
+      "vessel_length": 31.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.43,
+      "confidence_score": 0.43,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.774,
+      "duration_score": 0.3,
+      "coverage_score": 0.114,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.08,
+      "is_highly_suspicious": true,
+      "cluster_id": 7
+    },
+    {
+      "mmsi": 565382000,
+      "start": "2024-01-01T05:13:48",
+      "end": "2024-01-01T10:54:48",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        40.442555,
+        -68.48784
+      ],
+      "start_location": [
+        40.3279,
+        -67.8128
+      ],
+      "end_location": [
+        40.55721,
+        -69.16288
+      ],
+      "duration_hours": 5.68,
+      "vessel_name": "MELCHIOR SCHULTE",
+      "vessel_type": 70.0,
+      "vessel_length": 190.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.4,
+      "confidence_score": 0.4,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.774,
+      "duration_score": 0.284,
+      "coverage_score": 0.12,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.09,
+      "is_highly_suspicious": true,
+      "cluster_id": 9
+    },
+    {
+      "mmsi": 338038289,
+      "start": "2024-01-01T01:15:18",
+      "end": "2024-01-01T07:51:19",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        36.966544999999996,
+        -122.00201
+      ],
+      "start_location": [
+        36.96654,
+        -122.00201
+      ],
+      "end_location": [
+        36.96655,
+        -122.00201
+      ],
+      "duration_hours": 6.6,
+      "vessel_name": "BAITFINGER",
+      "vessel_type": 37.0,
+      "vessel_length": 11.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.54,
+      "confidence_score": 0.54,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.772,
+      "duration_score": 0.3,
+      "coverage_score": 0.092,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 10
+    },
+    {
+      "mmsi": 367460140,
+      "start": "2024-01-01T12:51:53",
+      "end": "2024-01-01T20:11:33",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        40.63965,
+        -80.475105
+      ],
+      "start_location": [
+        40.63963,
+        -80.4751
+      ],
+      "end_location": [
+        40.63967,
+        -80.47511
+      ],
+      "duration_hours": 7.33,
+      "vessel_name": "JAMES P BRYAN",
+      "vessel_type": 31.0,
+      "vessel_length": 20.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.55,
+      "confidence_score": 0.55,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.77,
+      "duration_score": 0.3,
+      "coverage_score": 0.09,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 2
+    },
+    {
+      "mmsi": 367670110,
+      "start": "2024-01-01T05:37:17",
+      "end": "2024-01-01T19:28:07",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.833034999999995,
+        -90.10652999999999
+      ],
+      "start_location": [
+        38.83304,
+        -90.10654
+      ],
+      "end_location": [
+        38.83303,
+        -90.10652
+      ],
+      "duration_hours": 13.85,
+      "vessel_name": "MARK DOUGHERTY",
+      "vessel_type": 52.0,
+      "vessel_length": 49.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.45,
+      "confidence_score": 0.45,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.77,
+      "duration_score": 0.3,
+      "coverage_score": 0.11,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.08,
+      "is_highly_suspicious": true,
+      "cluster_id": 3
+    },
+    {
+      "mmsi": 367725290,
+      "start": "2024-01-01T04:18:35",
+      "end": "2024-01-01T10:31:45",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.677845000000005,
+        -88.01039499999999
+      ],
+      "start_location": [
+        41.67784,
+        -88.01041
+      ],
+      "end_location": [
+        41.67785,
+        -88.01038
+      ],
+      "duration_hours": 6.22,
+      "vessel_name": "DEREK E",
+      "vessel_type": 31.0,
+      "vessel_length": 24.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.56,
+      "confidence_score": 0.56,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.768,
+      "duration_score": 0.3,
+      "coverage_score": 0.088,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 0
+    },
+    {
+      "mmsi": 366945650,
+      "start": "2024-01-01T13:28:18",
+      "end": "2024-01-01T22:45:58",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        36.07725,
+        -89.71402
+      ],
+      "start_location": [
+        35.91112,
+        -89.74248
+      ],
+      "end_location": [
+        36.24338,
+        -89.68556
+      ],
+      "duration_hours": 9.29,
+      "vessel_name": "SALLY ARCHER",
+      "vessel_type": 31.0,
+      "vessel_length": 488.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 2,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.57,
+      "confidence_score": 0.57,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.766,
+      "duration_score": 0.3,
+      "coverage_score": 0.086,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 7
+    },
+    {
+      "mmsi": 367342210,
+      "start": "2024-01-01T04:50:38",
+      "end": "2024-01-01T11:50:08",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.85565,
+        -90.11998
+      ],
+      "start_location": [
+        38.85565,
+        -90.11998
+      ],
+      "end_location": [
+        38.85565,
+        -90.11998
+      ],
+      "duration_hours": 6.99,
+      "vessel_name": "MARI LAMPTON",
+      "vessel_type": 52.0,
+      "vessel_length": 34.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 2,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.47,
+      "confidence_score": 0.47,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.766,
+      "duration_score": 0.3,
+      "coverage_score": 0.106,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.08,
+      "is_highly_suspicious": true,
+      "cluster_id": 3
+    },
+    {
+      "mmsi": 367812300,
+      "start": "2024-01-01T10:10:17",
+      "end": "2024-01-01T18:17:06",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        40.646315,
+        -80.50077
+      ],
+      "start_location": [
+        40.64631,
+        -80.50077
+      ],
+      "end_location": [
+        40.64632,
+        -80.50077
+      ],
+      "duration_hours": 8.11,
+      "vessel_name": "LINCOLN THOMAS",
+      "vessel_type": 52.0,
+      "vessel_length": 22.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.57,
+      "confidence_score": 0.57,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.766,
+      "duration_score": 0.3,
+      "coverage_score": 0.086,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 2
+    },
+    {
+      "mmsi": 636020562,
+      "start": "2024-01-01T08:26:08",
+      "end": "2024-01-01T14:05:47",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        44.772375,
+        -66.36807
+      ],
+      "start_location": [
+        45.19258,
+        -65.98967
+      ],
+      "end_location": [
+        44.35217,
+        -66.74647
+      ],
+      "duration_hours": 5.66,
+      "vessel_name": "SELENA",
+      "vessel_type": 80.0,
+      "vessel_length": 274.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.44,
+      "confidence_score": 0.44,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.765,
+      "duration_score": 0.283,
+      "coverage_score": 0.112,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.09,
+      "is_highly_suspicious": true,
+      "cluster_id": 11
+    },
+    {
+      "mmsi": 367301350,
+      "start": "2024-01-01T08:52:53",
+      "end": "2024-01-01T19:47:52",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        39.46403,
+        -73.34259
+      ],
+      "start_location": [
+        39.4643,
+        -73.34544
+      ],
+      "end_location": [
+        39.46376,
+        -73.33974
+      ],
+      "duration_hours": 10.92,
+      "vessel_name": "MARY VEE",
+      "vessel_type": 30.0,
+      "vessel_length": 26.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.58,
+      "confidence_score": 0.58,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.764,
+      "duration_score": 0.3,
+      "coverage_score": 0.084,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 367664560,
+      "start": "2024-01-01T03:58:04",
+      "end": "2024-01-01T16:23:02",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        44.62961,
+        -124.05256
+      ],
+      "start_location": [
+        44.6285,
+        -124.05446
+      ],
+      "end_location": [
+        44.63072,
+        -124.05066
+      ],
+      "duration_hours": 12.42,
+      "vessel_name": "EXCALIBUR",
+      "vessel_type": 30.0,
+      "vessel_length": 19.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 2,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.58,
+      "confidence_score": 0.58,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.764,
+      "duration_score": 0.3,
+      "coverage_score": 0.084,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 6
+    },
+    {
+      "mmsi": 367709780,
+      "start": "2024-01-01T05:06:03",
+      "end": "2024-01-01T12:04:43",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.629275,
+        -88.06306
+      ],
+      "start_location": [
+        41.62929,
+        -88.06306
+      ],
+      "end_location": [
+        41.62926,
+        -88.06306
+      ],
+      "duration_hours": 6.98,
+      "vessel_name": "STACY DIANNE",
+      "vessel_type": 31.0,
+      "vessel_length": 15.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.58,
+      "confidence_score": 0.58,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.764,
+      "duration_score": 0.3,
+      "coverage_score": 0.084,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 0
+    },
+    {
+      "mmsi": 367645970,
+      "start": "2024-01-01T12:29:03",
+      "end": "2024-01-01T18:39:43",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        35.66233,
+        -89.93469
+      ],
+      "start_location": [
+        35.66234,
+        -89.9347
+      ],
+      "end_location": [
+        35.66232,
+        -89.93468
+      ],
+      "duration_hours": 6.18,
+      "vessel_name": "ROBERT ANTHONY",
+      "vessel_type": 31.0,
+      "vessel_length": 307.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.44,
+      "confidence_score": 0.44,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.762,
+      "duration_score": 0.3,
+      "coverage_score": 0.112,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.07,
+      "is_highly_suspicious": true,
+      "cluster_id": 7
+    },
+    {
+      "mmsi": 367327910,
+      "start": "2024-01-01T16:50:30",
+      "end": "2024-01-01T22:35:10",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.642885,
+        -70.91587
+      ],
+      "start_location": [
+        41.64286,
+        -70.91584
+      ],
+      "end_location": [
+        41.64291,
+        -70.9159
+      ],
+      "duration_hours": 5.74,
+      "vessel_name": "GATEWAY ENDEAVOR",
+      "vessel_type": 60.0,
+      "vessel_length": 38.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.55,
+      "confidence_score": 0.55,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.757,
+      "duration_score": 0.287,
+      "coverage_score": 0.09,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 367782270,
+      "start": "2024-01-01T10:27:05",
+      "end": "2024-01-01T16:59:36",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.8307,
+        -82.15447
+      ],
+      "start_location": [
+        38.83071,
+        -82.15448
+      ],
+      "end_location": [
+        38.83069,
+        -82.15446
+      ],
+      "duration_hours": 6.54,
+      "vessel_name": "TOMMY H",
+      "vessel_type": 31.0,
+      "vessel_length": 160.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.52,
+      "confidence_score": 0.52,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.756,
+      "duration_score": 0.3,
+      "coverage_score": 0.096,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.08,
+      "is_highly_suspicious": true,
+      "cluster_id": 1
+    },
+    {
+      "mmsi": 369493024,
+      "start": "2024-01-01T06:58:05",
+      "end": "2024-01-01T14:30:35",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        44.002295000000004,
+        -124.12338
+      ],
+      "start_location": [
+        44.00229,
+        -124.12333
+      ],
+      "end_location": [
+        44.0023,
+        -124.12343
+      ],
+      "duration_hours": 7.54,
+      "vessel_name": "47MLB-UMPQUA RIVER",
+      "vessel_type": 51.0,
+      "vessel_length": 14.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.47,
+      "confidence_score": 0.47,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.756,
+      "duration_score": 0.3,
+      "coverage_score": 0.106,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.07,
+      "is_highly_suspicious": true,
+      "cluster_id": 6
+    },
+    {
+      "mmsi": 367555330,
+      "start": "2024-01-01T09:25:16",
+      "end": "2024-01-01T17:20:05",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.680930000000004,
+        -90.193305
+      ],
+      "start_location": [
+        38.68351,
+        -90.19594
+      ],
+      "end_location": [
+        38.67835,
+        -90.19067
+      ],
+      "duration_hours": 7.91,
+      "vessel_name": "LOUISIANA STAR",
+      "vessel_type": 31.0,
+      "vessel_length": 27.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.44,
+      "confidence_score": 0.44,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.752,
+      "duration_score": 0.3,
+      "coverage_score": 0.112,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.06,
+      "is_highly_suspicious": true,
+      "cluster_id": 3
+    },
+    {
+      "mmsi": 367018850,
+      "start": "2024-01-01T07:13:31",
+      "end": "2024-01-01T12:30:11",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.357825,
+        -72.085025
+      ],
+      "start_location": [
+        41.35782,
+        -72.08502
+      ],
+      "end_location": [
+        41.35783,
+        -72.08503
+      ],
+      "duration_hours": 5.28,
+      "vessel_name": "HEL-CAT II",
+      "vessel_type": 60.0,
+      "vessel_length": 35.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.37,
+      "confidence_score": 0.37,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.75,
+      "duration_score": 0.264,
+      "coverage_score": 0.126,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.08,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 369970595,
+      "start": "2024-01-01T07:14:05",
+      "end": "2024-01-01T16:30:44",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        44.62501,
+        -124.04839
+      ],
+      "start_location": [
+        44.62502,
+        -124.04838
+      ],
+      "end_location": [
+        44.625,
+        -124.0484
+      ],
+      "duration_hours": 9.28,
+      "vessel_name": "NOAA MOCKUP",
+      "vessel_type": 9.0,
+      "vessel_length": 10.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.45,
+      "confidence_score": 0.45,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.75,
+      "duration_score": 0.3,
+      "coverage_score": 0.11,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.06,
+      "is_highly_suspicious": true,
+      "cluster_id": 6
+    },
+    {
+      "mmsi": 367485980,
+      "start": "2024-01-01T09:17:20",
+      "end": "2024-01-01T19:51:11",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        42.612385,
+        -70.652335
+      ],
+      "start_location": [
+        42.61239,
+        -70.65236
+      ],
+      "end_location": [
+        42.61238,
+        -70.65231
+      ],
+      "duration_hours": 10.56,
+      "vessel_name": "CAPT JOE",
+      "vessel_type": 30.0,
+      "vessel_length": 24.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.51,
+      "confidence_score": 0.51,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.748,
+      "duration_score": 0.3,
+      "coverage_score": 0.098,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.07,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 367396130,
+      "start": "2024-01-01T07:02:58",
+      "end": "2024-01-01T12:19:00",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.672465,
+        -88.027895
+      ],
+      "start_location": [
+        41.67246,
+        -88.02789
+      ],
+      "end_location": [
+        41.67247,
+        -88.0279
+      ],
+      "duration_hours": 5.27,
+      "vessel_name": "WILLIAM C",
+      "vessel_type": 31.0,
+      "vessel_length": 24.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.48,
+      "confidence_score": 0.48,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.747,
+      "duration_score": 0.263,
+      "coverage_score": 0.104,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 0
+    },
+    {
+      "mmsi": 316023267,
+      "start": "2024-01-01T07:55:06",
+      "end": "2024-01-01T15:35:07",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        43.637705,
+        -79.38564
+      ],
+      "start_location": [
+        43.63766,
+        -79.38562
+      ],
+      "end_location": [
+        43.63775,
+        -79.38566
+      ],
+      "duration_hours": 7.67,
+      "vessel_name": "MU4",
+      "vessel_type": 55.0,
+      "vessel_length": 9.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.6,
+      "confidence_score": 0.6,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.74,
+      "duration_score": 0.3,
+      "coverage_score": 0.08,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.08,
+      "is_highly_suspicious": true,
+      "cluster_id": 12
+    },
+    {
+      "mmsi": 338147209,
+      "start": "2024-01-01T17:57:29",
+      "end": "2024-01-01T23:45:28",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.77478,
+        -76.56287
+      ],
+      "start_location": [
+        38.77479,
+        -76.56287
+      ],
+      "end_location": [
+        38.77477,
+        -76.56287
+      ],
+      "duration_hours": 5.8,
+      "vessel_name": "DADS DREAM",
+      "vessel_type": 37.0,
+      "vessel_length": 11.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.4,
+      "confidence_score": 0.4,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.74,
+      "duration_score": 0.29,
+      "coverage_score": 0.12,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.05,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 366984840,
+      "start": "2024-01-01T04:05:44",
+      "end": "2024-01-01T12:42:25",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.738235,
+        -90.15479500000001
+      ],
+      "start_location": [
+        38.73899,
+        -90.15425
+      ],
+      "end_location": [
+        38.73748,
+        -90.15534
+      ],
+      "duration_hours": 8.61,
+      "vessel_name": "COOP VANGUARD",
+      "vessel_type": 31.0,
+      "vessel_length": 356.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.51,
+      "confidence_score": 0.51,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.738,
+      "duration_score": 0.3,
+      "coverage_score": 0.098,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.06,
+      "is_highly_suspicious": true,
+      "cluster_id": 3
+    },
+    {
+      "mmsi": 367584050,
+      "start": "2024-01-01T09:01:31",
+      "end": "2024-01-01T22:07:34",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.642865,
+        -70.91620499999999
+      ],
+      "start_location": [
+        41.64283,
+        -70.91619
+      ],
+      "end_location": [
+        41.6429,
+        -70.91622
+      ],
+      "duration_hours": 13.1,
+      "vessel_name": "GASPEE",
+      "vessel_type": 63.0,
+      "vessel_length": 41.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.51,
+      "confidence_score": 0.51,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.738,
+      "duration_score": 0.3,
+      "coverage_score": 0.098,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.06,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 338426241,
+      "start": "2024-01-01T01:03:19",
+      "end": "2024-01-01T06:21:12",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.286874999999995,
+        -75.75872
+      ],
+      "start_location": [
+        38.28686,
+        -75.75877
+      ],
+      "end_location": [
+        38.28689,
+        -75.75867
+      ],
+      "duration_hours": 5.3,
+      "vessel_name": "ANOTHER DAY PARADISE",
+      "vessel_type": 37.0,
+      "vessel_length": 17.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.54,
+      "confidence_score": 0.54,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.737,
+      "duration_score": 0.265,
+      "coverage_score": 0.092,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 368126820,
+      "start": "2024-01-01T15:07:26",
+      "end": "2024-01-01T19:58:23",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.361705,
+        -75.61352
+      ],
+      "start_location": [
+        38.36171,
+        -75.61352
+      ],
+      "end_location": [
+        38.3617,
+        -75.61352
+      ],
+      "duration_hours": 4.85,
+      "vessel_name": "ANNAPOLIS",
+      "vessel_type": 52.0,
+      "vessel_length": 30.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.43,
+      "confidence_score": 0.43,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.736,
+      "duration_score": 0.242,
+      "coverage_score": 0.114,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 538004740,
+      "start": "2024-01-01T02:10:34",
+      "end": "2024-01-01T15:59:14",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        39.56575,
+        -71.488585
+      ],
+      "start_location": [
+        39.87933,
+        -69.91267
+      ],
+      "end_location": [
+        39.25217,
+        -73.0645
+      ],
+      "duration_hours": 13.81,
+      "vessel_name": "MAPLE STAR",
+      "vessel_type": 70.0,
+      "vessel_length": 180.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.48,
+      "confidence_score": 0.48,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.734,
+      "duration_score": 0.3,
+      "coverage_score": 0.104,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.05,
+      "is_highly_suspicious": true,
+      "cluster_id": -1
+    },
+    {
+      "mmsi": 316023269,
+      "start": "2024-01-01T05:32:27",
+      "end": "2024-01-01T14:33:19",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        43.638,
+        -79.38553
+      ],
+      "start_location": [
+        43.638,
+        -79.38553
+      ],
+      "end_location": [
+        43.638,
+        -79.38553
+      ],
+      "duration_hours": 9.01,
+      "vessel_name": "MU11",
+      "vessel_type": 55.0,
+      "vessel_length": 12.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 2,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.44,
+      "confidence_score": 0.44,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.732,
+      "duration_score": 0.3,
+      "coverage_score": 0.112,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.04,
+      "is_highly_suspicious": true,
+      "cluster_id": 12
+    },
+    {
+      "mmsi": 338438928,
+      "start": "2024-01-01T06:14:07",
+      "end": "2024-01-01T12:47:08",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.07463,
+        -71.93735000000001
+      ],
+      "start_location": [
+        41.07463,
+        -71.93734
+      ],
+      "end_location": [
+        41.07463,
+        -71.93736
+      ],
+      "duration_hours": 6.55,
+      "vessel_name": "MISTE ROSE",
+      "vessel_type": 30.0,
+      "vessel_length": 12.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.4,
+      "confidence_score": 0.4,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.73,
+      "duration_score": 0.3,
+      "coverage_score": 0.12,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.03,
+      "is_highly_suspicious": true,
+      "cluster_id": 5
+    },
+    {
+      "mmsi": 367812300,
+      "start": "2024-01-01T03:57:06",
+      "end": "2024-01-01T09:06:05",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        40.639089999999996,
+        -80.51365
+      ],
+      "start_location": [
+        40.63893,
+        -80.51319
+      ],
+      "end_location": [
+        40.63925,
+        -80.51411
+      ],
+      "duration_hours": 5.15,
+      "vessel_name": "LINCOLN THOMAS",
+      "vessel_type": 52.0,
+      "vessel_length": 22.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.54,
+      "confidence_score": 0.54,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.73,
+      "duration_score": 0.258,
+      "coverage_score": 0.092,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 2
+    },
+    {
+      "mmsi": 311057100,
+      "start": "2024-01-01T03:10:45",
+      "end": "2024-01-01T23:00:57",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        37.84262,
+        -71.736465
+      ],
+      "start_location": [
+        39.38038,
+        -69.94376
+      ],
+      "end_location": [
+        36.30486,
+        -73.52917
+      ],
+      "duration_hours": 19.84,
+      "vessel_name": "CSL TACOMA",
+      "vessel_type": 70.0,
+      "vessel_length": 229.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.46,
+      "confidence_score": 0.46,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.728,
+      "duration_score": 0.3,
+      "coverage_score": 0.108,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.04,
+      "is_highly_suspicious": true,
+      "cluster_id": -1
+    },
+    {
+      "mmsi": 367541350,
+      "start": "2024-01-01T02:27:22",
+      "end": "2024-01-01T06:49:10",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.852705,
+        -90.11779
+      ],
+      "start_location": [
+        38.85668,
+        -90.12548
+      ],
+      "end_location": [
+        38.84873,
+        -90.1101
+      ],
+      "duration_hours": 4.36,
+      "vessel_name": "CHUB MORRIS",
+      "vessel_type": 31.0,
+      "vessel_length": 16.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 1,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.36,
+      "confidence_score": 0.36,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.726,
+      "duration_score": 0.218,
+      "coverage_score": 0.128,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 3
+    },
+    {
+      "mmsi": 367671160,
+      "start": "2024-01-01T10:17:25",
+      "end": "2024-01-01T19:34:34",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        38.856674999999996,
+        -90.13395
+      ],
+      "start_location": [
+        38.83904,
+        -90.10665
+      ],
+      "end_location": [
+        38.87431,
+        -90.16125
+      ],
+      "duration_hours": 9.29,
+      "vessel_name": "MOLLY PATRICIA",
+      "vessel_type": 31.0,
+      "vessel_length": 304.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 0,
+      "unique_nearby_vessels": 2,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.53,
+      "confidence_score": 0.53,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.724,
+      "duration_score": 0.3,
+      "coverage_score": 0.094,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.05,
+      "is_highly_suspicious": true,
+      "cluster_id": 3
+    },
+    {
+      "mmsi": 367057450,
+      "start": "2024-01-01T13:12:51",
+      "end": "2024-01-01T17:30:31",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        41.50903,
+        -88.09654499999999
+      ],
+      "start_location": [
+        41.50903,
+        -88.09653
+      ],
+      "end_location": [
+        41.50903,
+        -88.09656
+      ],
+      "duration_hours": 4.29,
+      "vessel_name": "WAYNE P LAGRANGE",
+      "vessel_type": 52.0,
+      "vessel_length": 45.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 1,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 3,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.36,
+      "confidence_score": 0.36,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.723,
+      "duration_score": 0.214,
+      "coverage_score": 0.128,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 0
+    },
+    {
+      "mmsi": 368342080,
+      "start": "2024-01-01T03:50:19",
+      "end": "2024-01-01T08:19:48",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        42.356665,
+        -68.74464499999999
+      ],
+      "start_location": [
+        42.11925,
+        -68.68952
+      ],
+      "end_location": [
+        42.59408,
+        -68.79977
+      ],
+      "duration_hours": 4.49,
+      "vessel_name": "PROUD MARY",
+      "vessel_type": 30.0,
+      "vessel_length": 15.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 0,
+      "nearby_vessels_at_end": 1,
+      "unique_nearby_vessels": 4,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.42,
+      "confidence_score": 0.42,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.721,
+      "duration_score": 0.225,
+      "coverage_score": 0.116,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 9
+    },
+    {
+      "mmsi": 538006907,
+      "start": "2024-01-01T08:15:03",
+      "end": "2024-01-01T12:43:12",
+      "region": "Northern Pacific/Atlantic",
+      "location": [
+        44.678325,
+        -66.33944
+      ],
+      "start_location": [
+        44.29618,
+        -66.60425
+      ],
+      "end_location": [
+        45.06047,
+        -66.07463
+      ],
+      "duration_hours": 4.47,
+      "vessel_name": "PALANCA RIO",
+      "vessel_type": 89.0,
+      "vessel_length": 133.0,
+      "fishing_gear_types": [],
+      "is_fishing_vessel": false,
+      "nearby_vessels_at_start": 2,
+      "nearby_vessels_at_end": 2,
+      "unique_nearby_vessels": 0,
+      "continuously_transmitting_nearby": 1,
+      "coverage_reliability": 0.42,
+      "confidence_score": 0.42,
+      "high_confidence": false,
+      "nearby_vessel_details": [],
+      "total_score": 0.72,
+      "duration_score": 0.224,
+      "coverage_score": 0.116,
+      "eez_score": 0.18,
+      "fishing_score": 0.1,
+      "repeat_score": 0.1,
+      "is_highly_suspicious": true,
+      "cluster_id": 11
     }
   ],
   "dark_zone_hotspots": [
     {
-      "grid_id": "15.0,-88.0",
-      "center": [15.0, -88.0],
-      "event_count": 127,
-      "avg_suspicion_score": 0.724,
-      "unique_vessels": 43
+      "grid_id": "46.7,-120.0",
+      "center": [
+        46.7,
+        -120.0
+      ],
+      "event_count": 18346,
+      "avg_suspicion_score": 0.336,
+      "unique_vessels": 1341
     },
     {
-      "grid_id": "18.0,-65.0",
-      "center": [18.0, -65.0],
-      "event_count": 98,
-      "avg_suspicion_score": 0.681,
-      "unique_vessels": 34
+      "grid_id": "23.3,-80.0",
+      "center": [
+        23.3,
+        -80.0
+      ],
+      "event_count": 8672,
+      "avg_suspicion_score": 0.339,
+      "unique_vessels": 820
     },
     {
-      "grid_id": "40.0,-75.0",
-      "center": [40.0, -75.0],
-      "event_count": 76,
-      "avg_suspicion_score": 0.652,
-      "unique_vessels": 28
+      "grid_id": "46.7,-123.3",
+      "center": [
+        46.7,
+        -123.3
+      ],
+      "event_count": 5535,
+      "avg_suspicion_score": 0.341,
+      "unique_vessels": 333
+    },
+    {
+      "grid_id": "26.7,-90.0",
+      "center": [
+        26.7,
+        -90.0
+      ],
+      "event_count": 5329,
+      "avg_suspicion_score": 0.34,
+      "unique_vessels": 457
+    },
+    {
+      "grid_id": "33.3,-116.7",
+      "center": [
+        33.3,
+        -116.7
+      ],
+      "event_count": 4827,
+      "avg_suspicion_score": 0.334,
+      "unique_vessels": 479
+    },
+    {
+      "grid_id": "26.7,-93.3",
+      "center": [
+        26.7,
+        -93.3
+      ],
+      "event_count": 4757,
+      "avg_suspicion_score": 0.337,
+      "unique_vessels": 372
+    },
+    {
+      "grid_id": "26.7,-80.0",
+      "center": [
+        26.7,
+        -80.0
+      ],
+      "event_count": 4211,
+      "avg_suspicion_score": 0.335,
+      "unique_vessels": 515
+    },
+    {
+      "grid_id": "16.7,-63.3",
+      "center": [
+        16.7,
+        -63.3
+      ],
+      "event_count": 3843,
+      "avg_suspicion_score": 0.338,
+      "unique_vessels": 406
+    },
+    {
+      "grid_id": "36.7,-73.3",
+      "center": [
+        36.7,
+        -73.3
+      ],
+      "event_count": 3148,
+      "avg_suspicion_score": 0.512,
+      "unique_vessels": 350
+    },
+    {
+      "grid_id": "30.0,-86.7",
+      "center": [
+        30.0,
+        -86.7
+      ],
+      "event_count": 2437,
+      "avg_suspicion_score": 0.334,
+      "unique_vessels": 198
+    },
+    {
+      "grid_id": "30.0,-116.7",
+      "center": [
+        30.0,
+        -116.7
+      ],
+      "event_count": 2325,
+      "avg_suspicion_score": 0.334,
+      "unique_vessels": 201
+    },
+    {
+      "grid_id": "30.0,-80.0",
+      "center": [
+        30.0,
+        -80.0
+      ],
+      "event_count": 1572,
+      "avg_suspicion_score": 0.332,
+      "unique_vessels": 173
+    },
+    {
+      "grid_id": "40.0,-70.0",
+      "center": [
+        40.0,
+        -70.0
+      ],
+      "event_count": 1474,
+      "avg_suspicion_score": 0.518,
+      "unique_vessels": 168
+    },
+    {
+      "grid_id": "36.7,-120.0",
+      "center": [
+        36.7,
+        -120.0
+      ],
+      "event_count": 1341,
+      "avg_suspicion_score": 0.513,
+      "unique_vessels": 154
+    },
+    {
+      "grid_id": "33.3,-76.7",
+      "center": [
+        33.3,
+        -76.7
+      ],
+      "event_count": 1339,
+      "avg_suspicion_score": 0.39,
+      "unique_vessels": 153
+    },
+    {
+      "grid_id": "30.0,-76.7",
+      "center": [
+        30.0,
+        -76.7
+      ],
+      "event_count": 1103,
+      "avg_suspicion_score": 0.338,
+      "unique_vessels": 108
+    },
+    {
+      "grid_id": "40.0,-73.3",
+      "center": [
+        40.0,
+        -73.3
+      ],
+      "event_count": 946,
+      "avg_suspicion_score": 0.517,
+      "unique_vessels": 127
+    },
+    {
+      "grid_id": "26.7,-86.7",
+      "center": [
+        26.7,
+        -86.7
+      ],
+      "event_count": 943,
+      "avg_suspicion_score": 0.34,
+      "unique_vessels": 157
+    },
+    {
+      "grid_id": "30.0,-90.0",
+      "center": [
+        30.0,
+        -90.0
+      ],
+      "event_count": 891,
+      "avg_suspicion_score": 0.334,
+      "unique_vessels": 108
+    },
+    {
+      "grid_id": "43.3,-120.0",
+      "center": [
+        43.3,
+        -120.0
+      ],
+      "event_count": 833,
+      "avg_suspicion_score": 0.328,
+      "unique_vessels": 91
     }
   ],
   "suspicious_communities": [
     {
+      "community_id": 0,
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        0
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
+    },
+    {
       "community_id": 1,
-      "vessel_count": 23,
-      "vessel_mmsis": [231982000, 367305420, 538070892],
-      "internal_connections": 47,
-      "avg_suspicion_score": 0.738,
-      "fishing_vessel_count": 19,
-      "is_suspicious_fleet": true
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        4061
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
     },
     {
       "community_id": 2,
-      "vessel_count": 18,
-      "vessel_mmsis": [412389001, 367177840, 338075892],
-      "internal_connections": 31,
-      "avg_suspicion_score": 0.692,
-      "fishing_vessel_count": 14,
-      "is_suspicious_fleet": true
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        3381234
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
+    },
+    {
+      "community_id": 3,
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        3660489
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
+    },
+    {
+      "community_id": 4,
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        4566545
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
+    },
+    {
+      "community_id": 5,
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        4566548
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
+    },
+    {
+      "community_id": 6,
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        103669999
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
+    },
+    {
+      "community_id": 7,
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        123456789
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
+    },
+    {
+      "community_id": 8,
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        129129903
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
+    },
+    {
+      "community_id": 9,
+      "vessel_count": 1,
+      "vessel_mmsis": [
+        205717000
+      ],
+      "internal_connections": 0,
+      "avg_suspicion_score": 0.0,
+      "fishing_vessel_count": 0,
+      "is_suspicious_fleet": false
     }
   ],
   "potential_coordinators": [
     {
-      "mmsi": 231982000,
-      "vessel_name": "Unknown",
-      "degree_centrality": 0.324,
-      "betweenness_centrality": 0.187,
-      "closeness_centrality": 0.256,
-      "dark_event_count": 7,
-      "total_suspicion": 5.234,
-      "is_fishing": true
-    }
-  ],
-  "potential_motherships": [
+      "mmsi": 0,
+      "vessel_name": "CG49420",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "dark_event_count": 4,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
     {
-      "mmsi": 412389001,
-      "vessel_name": "Unknown",
-      "betweenness_centrality": 0.213,
-      "connected_fishing_vessels": 12,
-      "total_connections": 15,
-      "total_suspicion": 3.891
+      "mmsi": 4061,
+      "vessel_name": "BOOSTER 9000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 6,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 3381234,
+      "vessel_name": "ZEEPAARD",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 17,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 3660489,
+      "vessel_name": "NEPTUNE TLP",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 19,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 4566545,
+      "vessel_name": "nan",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 2,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 4566548,
+      "vessel_name": "nan",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 1,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 103669999,
+      "vessel_name": "MILADY",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 8,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 123456789,
+      "vessel_name": "ODYSSEY",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 8,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 129129903,
+      "vessel_name": "DRAGON FIRE",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 11,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 205717000,
+      "vessel_name": "LA TONDA",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 5,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 207832820,
+      "vessel_name": "TWINS",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 4,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209425000,
+      "vessel_name": "WARNOW BOATSWAIN",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 3,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209429000,
+      "vessel_name": "EVMILOS",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 4,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209470000,
+      "vessel_name": "MSC BOSPHORUS",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 4,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209513000,
+      "vessel_name": "JAUME II",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 1,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209550000,
+      "vessel_name": "CSCL AMERICA",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 4,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209705000,
+      "vessel_name": "CONTSHIP AIR",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 5,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209729000,
+      "vessel_name": "PROGRESO",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 14,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209786000,
+      "vessel_name": "VENUS HORIZON",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 2,
+      "total_suspicion": 0,
+      "is_fishing": false
+    },
+    {
+      "mmsi": 209888000,
+      "vessel_name": "CAPE ALTIUS",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0,
+      "dark_event_count": 1,
+      "total_suspicion": 0,
+      "is_fishing": false
     }
   ],
+  "potential_motherships": [],
   "all_clusters": [
     {
+      "cluster_id": 21,
+      "event_count": 30773,
+      "center_location": [
+        28.3383,
+        -85.7569
+      ],
+      "avg_suspicion_score": 0.337,
+      "unique_vessels": 2963,
+      "vessel_mmsis": [
+        368271360,
+        303104000,
+        368222210,
+        368640000,
+        368173060,
+        368050180,
+        311001095,
+        319701000,
+        367091720,
+        311001098
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 23,
+      "event_count": 23577,
+      "center_location": [
+        48.5083,
+        -122.956
+      ],
+      "avg_suspicion_score": 0.337,
+      "unique_vessels": 1616,
+      "vessel_mmsis": [
+        316047363,
+        316030984,
+        368132110,
+        316039183,
+        316039185,
+        338477073,
+        368009250,
+        338321456,
+        316039222,
+        367501370
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 5,
+      "event_count": 7393,
+      "center_location": [
+        38.4975,
+        -74.9863
+      ],
+      "avg_suspicion_score": 0.494,
+      "unique_vessels": 868,
+      "vessel_mmsis": [
+        0,
+        368007170,
+        367448070,
+        368144390,
+        355029000,
+        311001094,
+        367779850,
+        367669260,
+        367061010,
+        563066900
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 24,
+      "event_count": 4122,
+      "center_location": [
+        18.2786,
+        -64.6581
+      ],
+      "avg_suspicion_score": 0.337,
+      "unique_vessels": 463,
+      "vessel_mmsis": [
+        341504000,
+        338468867,
+        538071050,
+        232046610,
+        338429979,
+        316053531,
+        319316000,
+        311001127,
+        230185000,
+        338235434
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 48,
+      "event_count": 3175,
+      "center_location": [
+        33.802,
+        -118.244
+      ],
+      "avg_suspicion_score": 0.328,
+      "unique_vessels": 374,
+      "vessel_mmsis": [
+        338425869,
+        338210835,
+        338059284,
+        338241559,
+        368093210,
+        366762020,
+        338333735,
+        367644720,
+        338247729,
+        338384947
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 26,
+      "event_count": 2252,
+      "center_location": [
+        32.6657,
+        -117.1867
+      ],
+      "avg_suspicion_score": 0.334,
+      "unique_vessels": 194,
+      "vessel_mmsis": [
+        367648260,
+        368118790,
+        338212878,
+        367407630,
+        368184340,
+        366975000,
+        355263000,
+        338083867,
+        367790620,
+        368289310
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 25,
+      "event_count": 1731,
+      "center_location": [
+        34.2648,
+        -119.3902
+      ],
+      "avg_suspicion_score": 0.344,
+      "unique_vessels": 109,
+      "vessel_mmsis": [
+        338180096,
+        368185860,
+        367563270,
+        338158603,
+        338430481,
+        338328083,
+        368248340,
+        338477075,
+        368337430,
+        367778330
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 6,
+      "event_count": 1077,
+      "center_location": [
+        45.5763,
+        -124.8006
+      ],
+      "avg_suspicion_score": 0.423,
+      "unique_vessels": 119,
+      "vessel_mmsis": [
+        419001859,
+        311056900,
+        367676420,
+        205717000,
+        367428110,
+        367153680,
+        367199250,
+        538007573,
+        303679000,
+        366780440
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 4,
+      "event_count": 1067,
+      "center_location": [
+        37.76,
+        -122.4013
+      ],
+      "avg_suspicion_score": 0.511,
+      "unique_vessels": 131,
+      "vessel_mmsis": [
+        338396171,
+        338473996,
+        338168848,
+        338399761,
+        338340881,
+        338227743,
+        367021090,
+        338208292,
+        368221220,
+        338252838
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 57,
+      "event_count": 914,
+      "center_location": [
+        45.7082,
+        -122.7884
+      ],
+      "avg_suspicion_score": 0.326,
+      "unique_vessels": 116,
+      "vessel_mmsis": [
+        368279040,
+        338434061,
+        369493006,
+        367788560,
+        368082970,
+        367513120,
+        369493027,
+        367788590,
+        368233010,
+        368277050
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 0,
+      "event_count": 387,
+      "center_location": [
+        41.6215,
+        -88.0792
+      ],
+      "avg_suspicion_score": 0.529,
+      "unique_vessels": 42,
+      "vessel_mmsis": [
+        367383680,
+        367516930,
+        366936590,
+        367396110,
+        368009880,
+        367556250,
+        368230810,
+        367532570,
+        367396130,
+        367794470
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 10,
+      "event_count": 356,
+      "center_location": [
+        36.8233,
+        -121.9303
+      ],
+      "avg_suspicion_score": 0.521,
+      "unique_vessels": 21,
+      "vessel_mmsis": [
+        369990146,
+        338397709,
+        338038289,
+        367694610,
+        338467217,
+        369375000,
+        368280860,
+        338445233,
+        338353207,
+        338225733
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 12,
+      "event_count": 348,
+      "center_location": [
+        43.5912,
+        -79.3471
+      ],
+      "avg_suspicion_score": 0.527,
+      "unique_vessels": 20,
+      "vessel_mmsis": [
+        316025227,
+        316045081,
+        316026137,
+        316045085,
+        316044324,
+        316016060,
+        316001857,
+        316030796,
+        316009423,
+        316032594
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 3,
+      "event_count": 344,
+      "center_location": [
+        38.809,
+        -90.2019
+      ],
+      "avg_suspicion_score": 0.517,
+      "unique_vessels": 44,
+      "vessel_mmsis": [
+        367342210,
+        367555330,
+        366961540,
+        366984840,
+        367546890,
+        368149130,
+        366963470,
+        367481620,
+        366984980,
+        366917140
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 9,
+      "event_count": 300,
+      "center_location": [
+        43.1041,
+        -68.9708
+      ],
+      "avg_suspicion_score": 0.52,
+      "unique_vessels": 62,
+      "vessel_mmsis": [
+        338204032,
+        368095360,
+        373712000,
+        311001220,
+        538004740,
+        367010820,
+        367530120,
+        338178576,
+        338134545,
+        366933650
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 17,
+      "event_count": 295,
+      "center_location": [
+        44.3525,
+        -76.1636
+      ],
+      "avg_suspicion_score": 0.52,
+      "unique_vessels": 19,
+      "vessel_mmsis": [
+        316036229,
+        316050825,
+        338473618,
+        316025623,
+        316013980,
+        316041902,
+        316004910,
+        316286000,
+        316035905,
+        316037697
+      ],
+      "is_hotspot": false
+    },
+    {
       "cluster_id": 1,
-      "event_count": 127,
-      "center_location": [15.2, -88.0],
-      "avg_suspicion_score": 0.724,
-      "unique_vessels": 43,
-      "vessel_mmsis": [231982000, 367305420, 538070892],
-      "is_hotspot": true
+      "event_count": 283,
+      "center_location": [
+        38.7282,
+        -82.307
+      ],
+      "avg_suspicion_score": 0.525,
+      "unique_vessels": 34,
+      "vessel_mmsis": [
+        368203650,
+        368107910,
+        367402650,
+        367717920,
+        367333920,
+        368243490,
+        367402530,
+        368008740,
+        367710240,
+        367320750
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 36,
+      "event_count": 257,
+      "center_location": [
+        26.0428,
+        -97.2682
+      ],
+      "avg_suspicion_score": 0.344,
+      "unique_vessels": 27,
+      "vessel_mmsis": [
+        368220940,
+        368230420,
+        367587990,
+        367561370,
+        368097570,
+        368097190,
+        367709350,
+        367479080,
+        368142760,
+        367577390
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 7,
+      "event_count": 218,
+      "center_location": [
+        35.6528,
+        -89.892
+      ],
+      "avg_suspicion_score": 0.515,
+      "unique_vessels": 48,
+      "vessel_mmsis": [
+        368106370,
+        367638020,
+        367092230,
+        367770120,
+        366994190,
+        367645970,
+        367057810,
+        367471380,
+        367015830,
+        367523350
+      ],
+      "is_hotspot": false
+    },
+    {
+      "cluster_id": 22,
+      "event_count": 216,
+      "center_location": [
+        28.5653,
+        -96.527
+      ],
+      "avg_suspicion_score": 0.334,
+      "unique_vessels": 26,
+      "vessel_mmsis": [
+        367000450,
+        368096770,
+        367480070,
+        367189510,
+        368170890,
+        366995210,
+        368007450,
+        367536290,
+        367581090,
+        367779880
+      ],
+      "is_hotspot": false
     }
   ]
 }
