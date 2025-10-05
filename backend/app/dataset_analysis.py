@@ -16,8 +16,7 @@ def analyze_fishing_gear_datasets():
         'fixed_gear': '../../datasets/fixed_gear.csv',
         'pole_and_line': '../../datasets/pole_and_line.csv',
         'purse_seines': '../../datasets/purse_seines.csv',
-        'trawlers': '../../datasets/trawlers.csv',
-        'trollers': '../../datasets/trollers.csv'
+        'trawlers': '../../datasets/trawlers.csv'
     }
 
     analysis_results = {

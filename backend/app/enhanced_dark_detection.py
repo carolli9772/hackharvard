@@ -30,7 +30,6 @@ def load_fishing_gear_data():
         'pole_and_line': '../../datasets/pole_and_line.csv',
         'purse_seines': '../../datasets/purse_seines.csv',
         'trawlers': '../../datasets/trawlers.csv',
-        'trollers': '../../datasets/trollers.csv'
     }
 
     fishing_data = {}

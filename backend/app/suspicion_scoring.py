@@ -9,6 +9,23 @@ from sklearn.cluster import DBSCAN
 from collections import defaultdict
 import json
 
+def np_to_native(obj):
+    """Recursively convert NumPy types to native Python types for JSON serialization."""
+    if isinstance(obj, dict):
+        return {k: np_to_native(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [np_to_native(v) for v in obj]
+    elif isinstance(obj, (np.integer, np.int64)):
+        return int(obj)
+    elif isinstance(obj, (np.floating, np.float64)):
+        return float(obj)
+    elif isinstance(obj, (np.bool_)):
+        return bool(obj)
+    elif isinstance(obj, (np.ndarray,)):
+        return obj.tolist()
+    else:
+        return obj
+
 
 def calculate_eez_proximity(lat, lon):
     """
@@ -245,13 +262,13 @@ def save_scored_events(dark_events, cluster_summary, hexbin_data,
                        hexbin_path='dark_zone_hexbins.json'):
     """Save scored and clustered data."""
     with open(events_path, 'w') as f:
-        json.dump(dark_events, f, indent=2)
+        json.dump(np_to_native(dark_events), f, indent=2)
 
     with open(clusters_path, 'w') as f:
-        json.dump(cluster_summary, f, indent=2)
+        json.dump(np_to_native(cluster_summary), f, indent=2)
 
     with open(hexbin_path, 'w') as f:
-        json.dump(hexbin_data, f, indent=2)
+        json.dump(np_to_native(hexbin_data), f, indent=2)
 
     print(f"\nSaved scored events to {events_path}")
     print(f"Saved cluster summary to {clusters_path}")

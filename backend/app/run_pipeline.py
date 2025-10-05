@@ -23,45 +23,45 @@ def run_pipeline(run_full_analysis=True):
     start_time = time.time()
 
     try:
-        # Step 1: Enhanced Dark Event Detection
-        print("\n[1/7] Enhanced Dark Event Detection...")
-        print("-" * 60)
-        from enhanced_dark_detection import main as dark_detection
-        dark_events = dark_detection()
-        print(f"✓ Completed: Detected {len(dark_events)} dark events")
+        # # Step 1: Enhanced Dark Event Detection
+        # print("\n[1/7] Enhanced Dark Event Detection...")
+        # print("-" * 60)
+        # from enhanced_dark_detection import main as dark_detection
+        # dark_events = dark_detection()
+        # print(f"✓ Completed: Detected {len(dark_events)} dark events")
 
-        # Step 2: Vessel Proximity Index (optional - can be slow)
-        if run_full_analysis:
-            print("\n[2/7] Building Vessel Proximity Index...")
-            print("-" * 60)
-            print("Note: This step may take several minutes for large datasets...")
-            from proximity_index import main as proximity_index
-            proximity_events, pair_stats = proximity_index()
-            print(f"✓ Completed: Found {len(proximity_events)} proximity events")
-        else:
-            print("\n[2/7] Skipping Vessel Proximity Index (use --full for complete analysis)")
-            proximity_events = []
+        # # Step 2: Vessel Proximity Index (optional - can be slow)
+        # if run_full_analysis:
+        #     print("\n[2/7] Building Vessel Proximity Index...")
+        #     print("-" * 60)
+        #     print("Note: This step may take several minutes for large datasets...")
+        #     from proximity_index import main as proximity_index
+        #     proximity_events, pair_stats = proximity_index()
+        #     print(f"✓ Completed: Found {len(proximity_events)} proximity events")
+        # else:
+        #     print("\n[2/7] Skipping Vessel Proximity Index (use --full for complete analysis)")
+        #     proximity_events = []
 
-        # Step 3: Dark Event Context Checking
-        print("\n[3/7] Dark Event Context Checking...")
-        print("-" * 60)
-        from dark_event_context import main as context_check
-        contextualized_events, patterns = context_check()
-        print(f"✓ Completed: Contextualized {len(contextualized_events)} events")
+        # # Step 3: Dark Event Context Checking
+        # print("\n[3/7] Dark Event Context Checking...")
+        # print("-" * 60)
+        # from dark_event_context import main as context_check
+        # contextualized_events, patterns = context_check(lightweight=True)
+        # print(f"✓ Completed: Contextualized {len(contextualized_events)} events")
 
-        # Step 4: Suspicion Scoring and Clustering
-        print("\n[4/7] Suspicion Scoring and Clustering...")
-        print("-" * 60)
-        from suspicion_scoring import main as scoring
-        scored_events, clusters, hexbins = scoring()
-        print(f"✓ Completed: Scored {len(scored_events)} events, identified {len(clusters)} clusters")
+        # # Step 4: Suspicion Scoring and Clustering
+        # print("\n[4/7] Suspicion Scoring and Clustering...")
+        # print("-" * 60)
+        # from suspicion_scoring import main as scoring
+        # scored_events, clusters, hexbins = scoring()
+        # print(f"✓ Completed: Scored {len(scored_events)} events, identified {len(clusters)} clusters")
 
         # Step 5: Network Analysis
-        print("\n[5/7] Network Analysis...")
-        print("-" * 60)
-        from network_analysis import main as network
-        graph, centrality, communities, motherships = network()
-        print(f"✓ Completed: Analyzed network with {graph.number_of_nodes()} vessels, {len(communities)} communities")
+        # print("\n[5/7] Network Analysis...")
+        # print("-" * 60)
+        # from network_analysis import main as network
+        # graph, centrality, communities, motherships = network()
+        # print(f"✓ Completed: Analyzed network with {graph.number_of_nodes()} vessels, {len(communities)} communities")
 
         # Step 6: Advanced Visualization
         print("\n[6/7] Generating Visualizations...")

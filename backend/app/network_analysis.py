@@ -9,6 +9,22 @@ import networkx as nx
 from collections import defaultdict
 import json
 
+def np_to_native(obj):
+    """Recursively convert NumPy types (int64, float64, bool_) to native Python types for JSON serialization."""
+    if isinstance(obj, dict):
+        return {k: np_to_native(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [np_to_native(v) for v in obj]
+    elif isinstance(obj, (np.integer, np.int64)):
+        return int(obj)
+    elif isinstance(obj, (np.floating, np.float64)):
+        return float(obj)
+    elif isinstance(obj, (np.bool_)):
+        return bool(obj)
+    elif isinstance(obj, (np.ndarray,)):
+        return obj.tolist()
+    else:
+        return obj
 
 def build_vessel_network(dark_events, proximity_events):
     """
@@ -233,14 +249,14 @@ def save_network_analysis(G, centrality_scores, communities, motherships,
     print(f"\nSaved network graph to {graph_path}")
 
     # Save JSON data
-    with open(centrality_path, 'w') as f:
-        json.dump(centrality_scores, f, indent=2)
+    with open('vessel_communities.json', 'w') as f:
+        json.dump(np_to_native(communities), f, indent=2)
 
-    with open(community_path, 'w') as f:
-        json.dump(communities, f, indent=2)
+    with open('centrality_scores.json', 'w') as f:
+        json.dump(np_to_native(centrality_scores), f, indent=2)
 
-    with open(mothership_path, 'w') as f:
-        json.dump(motherships, f, indent=2)
+    with open('potential_motherships.json', 'w') as f:
+        json.dump(np_to_native(motherships), f, indent=2)
 
     print(f"Saved centrality scores to {centrality_path}")
     print(f"Saved communities to {community_path}")

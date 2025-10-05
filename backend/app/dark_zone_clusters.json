@@ -1,0 +1,1633 @@
+[
+  {
+    "cluster_id": 21,
+    "event_count": 30773,
+    "center_location": [
+      28.3383,
+      -85.7569
+    ],
+    "avg_suspicion_score": 0.337,
+    "unique_vessels": 2963,
+    "vessel_mmsis": [
+      368271360,
+      303104000,
+      368222210,
+      368640000,
+      368173060,
+      368050180,
+      311001095,
+      319701000,
+      367091720,
+      311001098
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 23,
+    "event_count": 23577,
+    "center_location": [
+      48.5083,
+      -122.956
+    ],
+    "avg_suspicion_score": 0.337,
+    "unique_vessels": 1616,
+    "vessel_mmsis": [
+      316047363,
+      316030984,
+      368132110,
+      316039183,
+      316039185,
+      338477073,
+      368009250,
+      338321456,
+      316039222,
+      367501370
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 5,
+    "event_count": 7393,
+    "center_location": [
+      38.4975,
+      -74.9863
+    ],
+    "avg_suspicion_score": 0.494,
+    "unique_vessels": 868,
+    "vessel_mmsis": [
+      0,
+      368007170,
+      367448070,
+      368144390,
+      355029000,
+      311001094,
+      367779850,
+      367669260,
+      367061010,
+      563066900
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 24,
+    "event_count": 4122,
+    "center_location": [
+      18.2786,
+      -64.6581
+    ],
+    "avg_suspicion_score": 0.337,
+    "unique_vessels": 463,
+    "vessel_mmsis": [
+      341504000,
+      338468867,
+      538071050,
+      232046610,
+      338429979,
+      316053531,
+      319316000,
+      311001127,
+      230185000,
+      338235434
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 48,
+    "event_count": 3175,
+    "center_location": [
+      33.802,
+      -118.244
+    ],
+    "avg_suspicion_score": 0.328,
+    "unique_vessels": 374,
+    "vessel_mmsis": [
+      338425869,
+      338210835,
+      338059284,
+      338241559,
+      368093210,
+      366762020,
+      338333735,
+      367644720,
+      338247729,
+      338384947
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 26,
+    "event_count": 2252,
+    "center_location": [
+      32.6657,
+      -117.1867
+    ],
+    "avg_suspicion_score": 0.334,
+    "unique_vessels": 194,
+    "vessel_mmsis": [
+      367648260,
+      368118790,
+      338212878,
+      367407630,
+      368184340,
+      366975000,
+      355263000,
+      338083867,
+      367790620,
+      368289310
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 25,
+    "event_count": 1731,
+    "center_location": [
+      34.2648,
+      -119.3902
+    ],
+    "avg_suspicion_score": 0.344,
+    "unique_vessels": 109,
+    "vessel_mmsis": [
+      338180096,
+      368185860,
+      367563270,
+      338158603,
+      338430481,
+      338328083,
+      368248340,
+      338477075,
+      368337430,
+      367778330
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 6,
+    "event_count": 1077,
+    "center_location": [
+      45.5763,
+      -124.8006
+    ],
+    "avg_suspicion_score": 0.423,
+    "unique_vessels": 119,
+    "vessel_mmsis": [
+      419001859,
+      311056900,
+      367676420,
+      205717000,
+      367428110,
+      367153680,
+      367199250,
+      538007573,
+      303679000,
+      366780440
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 4,
+    "event_count": 1067,
+    "center_location": [
+      37.76,
+      -122.4013
+    ],
+    "avg_suspicion_score": 0.511,
+    "unique_vessels": 131,
+    "vessel_mmsis": [
+      338396171,
+      338473996,
+      338168848,
+      338399761,
+      338340881,
+      338227743,
+      367021090,
+      338208292,
+      368221220,
+      338252838
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 57,
+    "event_count": 914,
+    "center_location": [
+      45.7082,
+      -122.7884
+    ],
+    "avg_suspicion_score": 0.326,
+    "unique_vessels": 116,
+    "vessel_mmsis": [
+      368279040,
+      338434061,
+      369493006,
+      367788560,
+      368082970,
+      367513120,
+      369493027,
+      367788590,
+      368233010,
+      368277050
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 0,
+    "event_count": 387,
+    "center_location": [
+      41.6215,
+      -88.0792
+    ],
+    "avg_suspicion_score": 0.529,
+    "unique_vessels": 42,
+    "vessel_mmsis": [
+      367383680,
+      367516930,
+      366936590,
+      367396110,
+      368009880,
+      367556250,
+      368230810,
+      367532570,
+      367396130,
+      367794470
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 10,
+    "event_count": 356,
+    "center_location": [
+      36.8233,
+      -121.9303
+    ],
+    "avg_suspicion_score": 0.521,
+    "unique_vessels": 21,
+    "vessel_mmsis": [
+      369990146,
+      338397709,
+      338038289,
+      367694610,
+      338467217,
+      369375000,
+      368280860,
+      338445233,
+      338353207,
+      338225733
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 12,
+    "event_count": 348,
+    "center_location": [
+      43.5912,
+      -79.3471
+    ],
+    "avg_suspicion_score": 0.527,
+    "unique_vessels": 20,
+    "vessel_mmsis": [
+      316025227,
+      316045081,
+      316026137,
+      316045085,
+      316044324,
+      316016060,
+      316001857,
+      316030796,
+      316009423,
+      316032594
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 3,
+    "event_count": 344,
+    "center_location": [
+      38.809,
+      -90.2019
+    ],
+    "avg_suspicion_score": 0.517,
+    "unique_vessels": 44,
+    "vessel_mmsis": [
+      367342210,
+      367555330,
+      366961540,
+      366984840,
+      367546890,
+      368149130,
+      366963470,
+      367481620,
+      366984980,
+      366917140
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 9,
+    "event_count": 300,
+    "center_location": [
+      43.1041,
+      -68.9708
+    ],
+    "avg_suspicion_score": 0.52,
+    "unique_vessels": 62,
+    "vessel_mmsis": [
+      338204032,
+      368095360,
+      373712000,
+      311001220,
+      538004740,
+      367010820,
+      367530120,
+      338178576,
+      338134545,
+      366933650
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 17,
+    "event_count": 295,
+    "center_location": [
+      44.3525,
+      -76.1636
+    ],
+    "avg_suspicion_score": 0.52,
+    "unique_vessels": 19,
+    "vessel_mmsis": [
+      316036229,
+      316050825,
+      338473618,
+      316025623,
+      316013980,
+      316041902,
+      316004910,
+      316286000,
+      316035905,
+      316037697
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 1,
+    "event_count": 283,
+    "center_location": [
+      38.7282,
+      -82.307
+    ],
+    "avg_suspicion_score": 0.525,
+    "unique_vessels": 34,
+    "vessel_mmsis": [
+      368203650,
+      368107910,
+      367402650,
+      367717920,
+      367333920,
+      368243490,
+      367402530,
+      368008740,
+      367710240,
+      367320750
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 36,
+    "event_count": 257,
+    "center_location": [
+      26.0428,
+      -97.2682
+    ],
+    "avg_suspicion_score": 0.344,
+    "unique_vessels": 27,
+    "vessel_mmsis": [
+      368220940,
+      368230420,
+      367587990,
+      367561370,
+      368097570,
+      368097190,
+      367709350,
+      367479080,
+      368142760,
+      367577390
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 7,
+    "event_count": 218,
+    "center_location": [
+      35.6528,
+      -89.892
+    ],
+    "avg_suspicion_score": 0.515,
+    "unique_vessels": 48,
+    "vessel_mmsis": [
+      368106370,
+      367638020,
+      367092230,
+      367770120,
+      366994190,
+      367645970,
+      367057810,
+      367471380,
+      367015830,
+      367523350
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 22,
+    "event_count": 216,
+    "center_location": [
+      28.5653,
+      -96.527
+    ],
+    "avg_suspicion_score": 0.334,
+    "unique_vessels": 26,
+    "vessel_mmsis": [
+      367000450,
+      368096770,
+      367480070,
+      367189510,
+      368170890,
+      366995210,
+      368007450,
+      367536290,
+      367581090,
+      367779880
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 44,
+    "event_count": 213,
+    "center_location": [
+      33.7225,
+      -78.8296
+    ],
+    "avg_suspicion_score": 0.343,
+    "unique_vessels": 17,
+    "vessel_mmsis": [
+      338473089,
+      338415555,
+      338310916,
+      338304133,
+      338129384,
+      338362794,
+      368081580,
+      368304560,
+      338124913,
+      368058260
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 32,
+    "event_count": 208,
+    "center_location": [
+      18.2911,
+      -69.5801
+    ],
+    "avg_suspicion_score": 0.337,
+    "unique_vessels": 34,
+    "vessel_mmsis": [
+      305904000,
+      563110400,
+      477881600,
+      538070403,
+      232007939,
+      636091783,
+      636090636,
+      232043155,
+      255806231,
+      255806367
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 51,
+    "event_count": 202,
+    "center_location": [
+      27.8058,
+      -97.3451
+    ],
+    "avg_suspicion_score": 0.305,
+    "unique_vessels": 53,
+    "vessel_mmsis": [
+      367704450,
+      538004487,
+      232045708,
+      563674000,
+      636020369,
+      338311572,
+      338391453,
+      367007520,
+      367637540,
+      538005419
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 38,
+    "event_count": 201,
+    "center_location": [
+      31.5996,
+      -91.521
+    ],
+    "avg_suspicion_score": 0.325,
+    "unique_vessels": 41,
+    "vessel_mmsis": [
+      366984320,
+      367059330,
+      366953860,
+      367116420,
+      366989830,
+      367398790,
+      367701380,
+      366952340,
+      366988310,
+      367668760
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 2,
+    "event_count": 178,
+    "center_location": [
+      40.6414,
+      -80.46
+    ],
+    "avg_suspicion_score": 0.527,
+    "unique_vessels": 16,
+    "vessel_mmsis": [
+      367716960,
+      367716740,
+      367712580,
+      367758950,
+      368094920,
+      367402520,
+      367759850,
+      367812300,
+      367460140,
+      367620140
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 49,
+    "event_count": 159,
+    "center_location": [
+      34.4149,
+      -90.6374
+    ],
+    "avg_suspicion_score": 0.329,
+    "unique_vessels": 28,
+    "vessel_mmsis": [
+      366917120,
+      368106370,
+      367702150,
+      366989970,
+      367535250,
+      367451290,
+      367438630,
+      368269740,
+      367669940,
+      367702070
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 50,
+    "event_count": 132,
+    "center_location": [
+      19.5974,
+      -68.5008
+    ],
+    "avg_suspicion_score": 0.318,
+    "unique_vessels": 26,
+    "vessel_mmsis": [
+      565440000,
+      636020486,
+      338789000,
+      257674000,
+      241796000,
+      215001000,
+      538008243,
+      538006842,
+      377901119,
+      405000256
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 46,
+    "event_count": 123,
+    "center_location": [
+      21.2513,
+      -157.9408
+    ],
+    "avg_suspicion_score": 0.315,
+    "unique_vessels": 45,
+    "vessel_mmsis": [
+      367639430,
+      368236170,
+      367137680,
+      338473878,
+      244128536,
+      366982310,
+      367789740,
+      367755180,
+      311001260,
+      366920620
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 11,
+    "event_count": 101,
+    "center_location": [
+      44.9809,
+      -66.3949
+    ],
+    "avg_suspicion_score": 0.408,
+    "unique_vessels": 16,
+    "vessel_mmsis": [
+      538002784,
+      316016449,
+      636019170,
+      316023683,
+      316001828,
+      316011461,
+      316028326,
+      636015304,
+      566453000,
+      538002220
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 66,
+    "event_count": 98,
+    "center_location": [
+      46.7775,
+      -90.7906
+    ],
+    "avg_suspicion_score": 0.335,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      367332010,
+      367331980,
+      369970030,
+      367331990
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 47,
+    "event_count": 81,
+    "center_location": [
+      49.0841,
+      -125.7362
+    ],
+    "avg_suspicion_score": 0.345,
+    "unique_vessels": 10,
+    "vessel_mmsis": [
+      316002306,
+      316042019,
+      316041768,
+      316004106,
+      316042989,
+      316027631,
+      316037524,
+      316005204,
+      316007157,
+      316033048
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 19,
+    "event_count": 79,
+    "center_location": [
+      43.2714,
+      -79.7933
+    ],
+    "avg_suspicion_score": 0.519,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      316029000,
+      316024041,
+      316034846,
+      316018031
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 71,
+    "event_count": 71,
+    "center_location": [
+      18.4597,
+      -66.0888
+    ],
+    "avg_suspicion_score": 0.331,
+    "unique_vessels": 6,
+    "vessel_mmsis": [
+      338353894,
+      368006250,
+      338372906,
+      368160150,
+      338381016,
+      368177790
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 14,
+    "event_count": 69,
+    "center_location": [
+      40.3308,
+      -79.8671
+    ],
+    "avg_suspicion_score": 0.515,
+    "unique_vessels": 10,
+    "vessel_mmsis": [
+      367397760,
+      367712610,
+      368060270,
+      367758960,
+      367721010,
+      367543860,
+      368322590,
+      367712090,
+      367750460,
+      368311870
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 58,
+    "event_count": 63,
+    "center_location": [
+      48.4048,
+      -89.2208
+    ],
+    "avg_suspicion_score": 0.347,
+    "unique_vessels": 5,
+    "vessel_mmsis": [
+      316001094,
+      316023339,
+      316033712,
+      316044371,
+      316001881
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 28,
+    "event_count": 62,
+    "center_location": [
+      42.1302,
+      -80.1027
+    ],
+    "avg_suspicion_score": 0.513,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      338384656,
+      316029516
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 27,
+    "event_count": 44,
+    "center_location": [
+      35.3688,
+      -120.8559
+    ],
+    "avg_suspicion_score": 0.519,
+    "unique_vessels": 3,
+    "vessel_mmsis": [
+      369970909,
+      367107830,
+      338163877
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 35,
+    "event_count": 41,
+    "center_location": [
+      41.9875,
+      -124.2586
+    ],
+    "avg_suspicion_score": 0.463,
+    "unique_vessels": 12,
+    "vessel_mmsis": [
+      367077760,
+      367188450,
+      367607430,
+      369990312,
+      367554440,
+      367509520,
+      367511740,
+      366788850,
+      367531350,
+      367723480
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 69,
+    "event_count": 40,
+    "center_location": [
+      15.8538,
+      -65.5396
+    ],
+    "avg_suspicion_score": 0.31,
+    "unique_vessels": 12,
+    "vessel_mmsis": [
+      304044000,
+      368240920,
+      441115000,
+      636093095,
+      209705000,
+      209425000,
+      215217000,
+      538004912,
+      352001169,
+      414043000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 62,
+    "event_count": 39,
+    "center_location": [
+      30.4953,
+      -91.7497
+    ],
+    "avg_suspicion_score": 0.345,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      367415180,
+      368335430
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 37,
+    "event_count": 35,
+    "center_location": [
+      33.6155,
+      -121.7973
+    ],
+    "avg_suspicion_score": 0.351,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      229779000,
+      538010457,
+      538006916,
+      636019061
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 18,
+    "event_count": 32,
+    "center_location": [
+      44.5091,
+      -88.0221
+    ],
+    "avg_suspicion_score": 0.532,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      367649630
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 65,
+    "event_count": 31,
+    "center_location": [
+      16.4296,
+      -70.1726
+    ],
+    "avg_suspicion_score": 0.347,
+    "unique_vessels": 8,
+    "vessel_mmsis": [
+      477552200,
+      255805897,
+      311000747,
+      636090636,
+      370558000,
+      636017971,
+      419001015,
+      355911000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 15,
+    "event_count": 29,
+    "center_location": [
+      44.5269,
+      -67.6157
+    ],
+    "avg_suspicion_score": 0.532,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      369493065
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 61,
+    "event_count": 29,
+    "center_location": [
+      30.4365,
+      -110.9589
+    ],
+    "avg_suspicion_score": 0.352,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      367668810
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 13,
+    "event_count": 28,
+    "center_location": [
+      41.9053,
+      -73.9994
+    ],
+    "avg_suspicion_score": 0.519,
+    "unique_vessels": 3,
+    "vessel_mmsis": [
+      366993880,
+      366999984,
+      366999975
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 29,
+    "event_count": 28,
+    "center_location": [
+      37.9956,
+      -90.0492
+    ],
+    "avg_suspicion_score": 0.448,
+    "unique_vessels": 13,
+    "vessel_mmsis": [
+      366963070,
+      366989860,
+      366989990,
+      366989960,
+      367380840,
+      366984970,
+      367772590,
+      366984910,
+      367041550,
+      367140820
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 20,
+    "event_count": 26,
+    "center_location": [
+      42.0204,
+      -82.6005
+    ],
+    "avg_suspicion_score": 0.516,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      367084930,
+      316003124
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 31,
+    "event_count": 26,
+    "center_location": [
+      38.3264,
+      -123.0566
+    ],
+    "avg_suspicion_score": 0.503,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      338357858,
+      367535010,
+      366999709,
+      367552630
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 41,
+    "event_count": 23,
+    "center_location": [
+      20.794,
+      -156.4862
+    ],
+    "avg_suspicion_score": 0.335,
+    "unique_vessels": 7,
+    "vessel_mmsis": [
+      227532640,
+      235112322,
+      367745320,
+      533130964,
+      368084030,
+      367007870,
+      367773150
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 74,
+    "event_count": 20,
+    "center_location": [
+      25.9324,
+      -83.1706
+    ],
+    "avg_suspicion_score": 0.312,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      314685000,
+      636019625,
+      311000899,
+      367635620
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 16,
+    "event_count": 19,
+    "center_location": [
+      43.6018,
+      -83.8954
+    ],
+    "avg_suspicion_score": 0.526,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      338107088
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 8,
+    "event_count": 17,
+    "center_location": [
+      42.5045,
+      -82.8675
+    ],
+    "avg_suspicion_score": 0.539,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      366999978,
+      338446637
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 76,
+    "event_count": 16,
+    "center_location": [
+      30.8121,
+      -118.8455
+    ],
+    "avg_suspicion_score": 0.296,
+    "unique_vessels": 3,
+    "vessel_mmsis": [
+      356581000,
+      563214000,
+      311000903
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 68,
+    "event_count": 15,
+    "center_location": [
+      46.7532,
+      -92.1337
+    ],
+    "avg_suspicion_score": 0.331,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      368156740,
+      367082230
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 40,
+    "event_count": 14,
+    "center_location": [
+      44.7664,
+      -85.6072
+    ],
+    "avg_suspicion_score": 0.505,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      338940000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 45,
+    "event_count": 14,
+    "center_location": [
+      37.1049,
+      -125.564
+    ],
+    "avg_suspicion_score": 0.491,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      351757000,
+      367438000,
+      563160200,
+      431651000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 64,
+    "event_count": 14,
+    "center_location": [
+      15.9399,
+      -68.4076
+    ],
+    "avg_suspicion_score": 0.343,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      356307000,
+      419001015
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 67,
+    "event_count": 13,
+    "center_location": [
+      22.9947,
+      -63.737
+    ],
+    "avg_suspicion_score": 0.361,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      310779000,
+      636023218
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 72,
+    "event_count": 13,
+    "center_location": [
+      14.7617,
+      -67.3831
+    ],
+    "avg_suspicion_score": 0.332,
+    "unique_vessels": 3,
+    "vessel_mmsis": [
+      355211000,
+      636020763,
+      419001015
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 30,
+    "event_count": 11,
+    "center_location": [
+      40.786,
+      -124.1819
+    ],
+    "avg_suspicion_score": 0.546,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      366813420,
+      368068430
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 43,
+    "event_count": 9,
+    "center_location": [
+      42.7856,
+      -80.1613
+    ],
+    "avg_suspicion_score": 0.472,
+    "unique_vessels": 3,
+    "vessel_mmsis": [
+      316053441,
+      316005378,
+      316050854
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 56,
+    "event_count": 9,
+    "center_location": [
+      19.6232,
+      -155.9927
+    ],
+    "avg_suspicion_score": 0.328,
+    "unique_vessels": 3,
+    "vessel_mmsis": [
+      366714000,
+      367613000,
+      366339000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 86,
+    "event_count": 9,
+    "center_location": [
+      33.8522,
+      -123.9786
+    ],
+    "avg_suspicion_score": 0.24,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      369209000,
+      477293900,
+      209786000,
+      477182200
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 53,
+    "event_count": 7,
+    "center_location": [
+      38.0077,
+      -121.4599
+    ],
+    "avg_suspicion_score": 0.477,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      338311105,
+      367620770,
+      367421660,
+      316050527
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 42,
+    "event_count": 6,
+    "center_location": [
+      42.9231,
+      -69.8697
+    ],
+    "avg_suspicion_score": 0.506,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      366277460
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 52,
+    "event_count": 6,
+    "center_location": [
+      13.4503,
+      144.6565
+    ],
+    "avg_suspicion_score": 0.416,
+    "unique_vessels": 5,
+    "vessel_mmsis": [
+      369493762,
+      303533000,
+      369369000,
+      367333430,
+      338707000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 59,
+    "event_count": 6,
+    "center_location": [
+      43.7459,
+      -81.7226
+    ],
+    "avg_suspicion_score": 0.431,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      316026824,
+      316004950
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 34,
+    "event_count": 5,
+    "center_location": [
+      0.1167,
+      -65.25
+    ],
+    "avg_suspicion_score": 0.523,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      775992195
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 77,
+    "event_count": 5,
+    "center_location": [
+      19.7134,
+      -158.2844
+    ],
+    "avg_suspicion_score": 0.301,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      368236430
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 79,
+    "event_count": 5,
+    "center_location": [
+      21.3571,
+      -64.0622
+    ],
+    "avg_suspicion_score": 0.294,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      311000795
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 80,
+    "event_count": 5,
+    "center_location": [
+      11.8093,
+      145.8904
+    ],
+    "avg_suspicion_score": 0.303,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      431128000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 83,
+    "event_count": 5,
+    "center_location": [
+      19.3778,
+      -157.7799
+    ],
+    "avg_suspicion_score": 0.282,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      367699410
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 39,
+    "event_count": 4,
+    "center_location": [
+      42.5263,
+      -65.406
+    ],
+    "avg_suspicion_score": 0.508,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      215804000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 54,
+    "event_count": 4,
+    "center_location": [
+      35.2655,
+      -124.0283
+    ],
+    "avg_suspicion_score": 0.433,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      636019061
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 60,
+    "event_count": 4,
+    "center_location": [
+      18.4269,
+      -156.958
+    ],
+    "avg_suspicion_score": 0.31,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      352978275
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 63,
+    "event_count": 4,
+    "center_location": [
+      25.2767,
+      -86.5765
+    ],
+    "avg_suspicion_score": 0.388,
+    "unique_vessels": 4,
+    "vessel_mmsis": [
+      372341000,
+      258804000,
+      563189700,
+      477948600
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 70,
+    "event_count": 4,
+    "center_location": [
+      43.0495,
+      -86.2345
+    ],
+    "avg_suspicion_score": 0.392,
+    "unique_vessels": 3,
+    "vessel_mmsis": [
+      367161610,
+      338485427,
+      367161620
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 78,
+    "event_count": 4,
+    "center_location": [
+      21.8799,
+      -159.4485
+    ],
+    "avg_suspicion_score": 0.312,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      367380290
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 82,
+    "event_count": 4,
+    "center_location": [
+      23.5173,
+      -156.6145
+    ],
+    "avg_suspicion_score": 0.277,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      366855000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 84,
+    "event_count": 4,
+    "center_location": [
+      21.9819,
+      -155.6401
+    ],
+    "avg_suspicion_score": 0.254,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      367018980
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 87,
+    "event_count": 4,
+    "center_location": [
+      48.397,
+      -129.1633
+    ],
+    "avg_suspicion_score": 0.32,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      210602000,
+      566492000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 88,
+    "event_count": 4,
+    "center_location": [
+      20.2753,
+      -64.6831
+    ],
+    "avg_suspicion_score": 0.273,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      218851000,
+      636021122
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 33,
+    "event_count": 3,
+    "center_location": [
+      41.4916,
+      -81.7178
+    ],
+    "avg_suspicion_score": 0.515,
+    "unique_vessels": 2,
+    "vessel_mmsis": [
+      367649680,
+      367649750
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 55,
+    "event_count": 3,
+    "center_location": [
+      44.9857,
+      -80.3132
+    ],
+    "avg_suspicion_score": 0.397,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      316001834
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 73,
+    "event_count": 3,
+    "center_location": [
+      15.8369,
+      -62.8583
+    ],
+    "avg_suspicion_score": 0.335,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      377901111
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 75,
+    "event_count": 3,
+    "center_location": [
+      12.454,
+      143.9148
+    ],
+    "avg_suspicion_score": 0.358,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      309108000
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 81,
+    "event_count": 3,
+    "center_location": [
+      11.7233,
+      142.2484
+    ],
+    "avg_suspicion_score": 0.283,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      538008116
+    ],
+    "is_hotspot": false
+  },
+  {
+    "cluster_id": 85,
+    "event_count": 3,
+    "center_location": [
+      48.368,
+      -124.6127
+    ],
+    "avg_suspicion_score": 0.323,
+    "unique_vessels": 1,
+    "vessel_mmsis": [
+      367460470
+    ],
+    "is_hotspot": false
+  }
+]
