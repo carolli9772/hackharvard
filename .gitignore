@@ -48,3 +48,9 @@ htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Extra Large Files
+backend/app/contextualized_dark_events.json
+backend/app/proximity_index.json
+backend/app/proximity_index_partial.json
+backend/app/scored_dark_events.json
