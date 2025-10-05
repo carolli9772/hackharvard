@@ -1,0 +1,1781 @@
+{
+  "fishing_gear_analysis": {
+    "gear_type_summary": [
+      {
+        "gear_type": "drifting_longlines",
+        "vessel_count": 13968727,
+        "columns": [
+          "mmsi",
+          "timestamp",
+          "distance_from_shore",
+          "distance_from_port",
+          "speed",
+          "course",
+          "lat",
+          "lon",
+          "is_fishing",
+          "source"
+        ],
+        "unique_mmsi": 110
+      },
+      {
+        "gear_type": "fixed_gear",
+        "vessel_count": 1559137,
+        "columns": [
+          "mmsi",
+          "timestamp",
+          "distance_from_shore",
+          "distance_from_port",
+          "speed",
+          "course",
+          "lat",
+          "lon",
+          "is_fishing",
+          "source"
+        ],
+        "unique_mmsi": 36
+      },
+      {
+        "gear_type": "pole_and_line",
+        "vessel_count": 161315,
+        "columns": [
+          "mmsi",
+          "timestamp",
+          "distance_from_shore",
+          "distance_from_port",
+          "speed",
+          "course",
+          "lat",
+          "lon",
+          "is_fishing",
+          "source"
+        ],
+        "unique_mmsi": 6
+      },
+      {
+        "gear_type": "purse_seines",
+        "vessel_count": 1545323,
+        "columns": [
+          "mmsi",
+          "timestamp",
+          "distance_from_shore",
+          "distance_from_port",
+          "speed",
+          "course",
+          "lat",
+          "lon",
+          "is_fishing",
+          "source"
+        ],
+        "unique_mmsi": 28
+      },
+      {
+        "gear_type": "trawlers",
+        "vessel_count": 4369101,
+        "columns": [
+          "mmsi",
+          "timestamp",
+          "distance_from_shore",
+          "distance_from_port",
+          "speed",
+          "course",
+          "lat",
+          "lon",
+          "is_fishing",
+          "source"
+        ],
+        "unique_mmsi": 49
+      }
+    ],
+    "all_fishing_vessels": [
+      {
+        "mmsi": 1252339803566,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 5020143137211,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 5145483253513,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 5601266154050,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 7572518792420,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 8681844482850,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 9924005022437,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 10759394346704,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 10880510825243,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 11170005450471,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 12639560807591,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 16508054338972,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 18199244904065,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 18483455048454,
+        "gear_type": [
+          "pole_and_line"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 19859547683322,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 20001834541437,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 21232708893780,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 23406746127304,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 23593130178765,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 23770783250938,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 26616040923734,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 27932326533321,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 28144259049658,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 30054937091173,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 30373804074051,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 30581813007233,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 31865679879784,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 32225346417081,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 33266086194351,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 34911701098431,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 36212632719018,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 36427802545466,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 37908995999986,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 38322969102051,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 38992105566132,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 39005622580143,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 39859406485734,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 40834114543542,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 40976637345731,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 41941786536935,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 42314208291274,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 43935946737362,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 44009123736191,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 47334168288729,
+        "gear_type": [
+          "pole_and_line"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 48455039594066,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 48939529147579,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 49160289345306,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 49534994750419,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 51101297206144,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 51394439323066,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 53148833486047,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 56414685655968,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 59112496180970,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 59665165133807,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 60628870128017,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 62603844222786,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 63716389910332,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 68776567390102,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 69609856269322,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 72061040661322,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 75704340932214,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 77182424306278,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 77261928739173,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 77832927010710,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 78359653510570,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 79111403404442,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 80423450140220,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 80557044293978,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 81263963638651,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 81653757071585,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 83050616095643,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 83171028160219,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 83611953083118,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 84948799517770,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 85022770160929,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 85873573270094,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 86817739143879,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 87031415611873,
+        "gear_type": [
+          "pole_and_line"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 87919276942456,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 88026465034109,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 88060965838011,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 88780175381729,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 89110306461984,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 91817019950540,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 94009022646679,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 94745481952721,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 95062718521348,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 96214383360627,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 100043174358994,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 100771710683634,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 102029098096261,
+        "gear_type": [
+          "pole_and_line"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 102111574707951,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 103576446797335,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 103786638076601,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 104081773926431,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 106150487182509,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 108694285641009,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 108916342700357,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 109864465509954,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 109899633275761,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 110014060911622,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 112453193185843,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 116333895145045,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 117813837180006,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 118485905119293,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 119914759372174,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 121426486551523,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 121739171405202,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 122096467518708,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 126605727399747,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 129153374871944,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 130528914446151,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 132058711150033,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 132854487178939,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 133292692499348,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 133554754525857,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 134198565019795,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 134393118622376,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 135658402276906,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 136929052181490,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 138705062821220,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 139028728648447,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 139135923300128,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 139761124626862,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 141400905437140,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 141431600530701,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 141471888075398,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 143694748644249,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 143906914639303,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 149117408188942,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 149732026109185,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 157226661382842,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 157515842393095,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 157606376843577,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 158316964992067,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 160888730138947,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 164146740964321,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 168015789077263,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 169618621411728,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 171088031194242,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 174925870281549,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 175387414441613,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 177523928951928,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 178183327397239,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 178555652571863,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 178858950138911,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 180084767642619,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 181792856256929,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 182087889708399,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 183690246677486,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 183812835001603,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 184417002225525,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 184922007900201,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 185079710227621,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 186746307373264,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 187707772448569,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 188687364514644,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 192426881471378,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 192692343350638,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 192803403297411,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 194671993660064,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 194716368060295,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 196010605910823,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 196184437994412,
+        "gear_type": [
+          "pole_and_line"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 196934368191473,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 197235271847792,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 198075846723102,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 198266627907369,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 202807357436622,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 203685766228826,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 204349732031005,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 205198558017191,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 205398406929032,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 207302220793465,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 207493565218514,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 207595838999742,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 207649577408623,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 208886908053041,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 208925550869609,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 210316168866209,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 212703922233424,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 214572731257568,
+        "gear_type": [
+          "pole_and_line"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 215151145083937,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 218796484670282,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 218997104404214,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 222656062190286,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 224464308529424,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 224833127282221,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 225902824726985,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 225986789154693,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 229561307305795,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 229926462784947,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 230452925672863,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 231154271004480,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 240226012373593,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 240306622847094,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 245558512447234,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 249436063983467,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 250845635365871,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 251022003811177,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 252626663422393,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 253383408980179,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 253857904988474,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 255320322989778,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 257110405481434,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 257268756979349,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 258237566084521,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 260992596962571,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 261683006747890,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 262522671777909,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 262534508730959,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 263392518194890,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 266462074800686,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 267609942203034,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 267966743027591,
+        "gear_type": [
+          "purse_seines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 268433469365583,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 269050323939773,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 269119641458109,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 271347251834362,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 271648488454992,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 273352002611600,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 274683790319798,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 274850145767759,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 277458320934593,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 277515277585463,
+        "gear_type": [
+          "trawlers"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 278798244192815,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 280291299563683,
+        "gear_type": [
+          "fixed_gear"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 281060477973977,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      },
+      {
+        "mmsi": 281205828320417,
+        "gear_type": [
+          "drifting_longlines"
+        ],
+        "gear_count": 1
+      }
+    ],
+    "total_fishing_vessels": 229,
+    "multi_gear_vessels": 0
+  },
+  "protected_areas_analysis": {
+    "total_areas": 17009,
+    "columns": [
+      "TYPE",
+      "WDPAID",
+      "WDPA_PID",
+      "PA_DEF",
+      "NAME",
+      "ORIG_NAME",
+      "DESIG",
+      "DESIG_ENG",
+      "DESIG_TYPE",
+      "IUCN_CAT",
+      "INT_CRIT",
+      "MARINE",
+      "REP_M_AREA",
+      "GIS_M_AREA",
+      "REP_AREA",
+      "GIS_AREA",
+      "NO_TAKE",
+      "NO_TK_AREA",
+      "STATUS",
+      "STATUS_YR",
+      "GOV_TYPE",
+      "OWN_TYPE",
+      "MANG_AUTH",
+      "MANG_PLAN",
+      "VERIF",
+      "METADATAID",
+      "SUB_LOC",
+      "PARENT_ISO3",
+      "ISO3",
+      "SUPP_INFO",
+      "CONS_OBJ"
+    ],
+    "top_designations": {
+      "Nature Reserve": 1664,
+      "Special Areas of Conservation (Habitats Directive)": 1463,
+      "Special Protection Area (Birds Directive)": 833,
+      "Marine Protected Area": 811,
+      "Ramsar Site, Wetland of International Importance": 619,
+      "Water fowl gathering area": 563,
+      "Emerald Network": 528,
+      "Site of Special Scientific Interest": 526,
+      "Wildlife and Plant Sanctuary": 519,
+      "Marine Protected Area (OSPAR)": 483
+    },
+    "area_stats": {
+      "count": 17009.0,
+      "mean": 2639.8338154480193,
+      "std": 52771.372872579195,
+      "min": 0.0,
+      "25%": 0.107799997329712,
+      "50%": 2.6,
+      "75%": 41.7593420830878,
+      "max": 4530541.871303
+    },
+    "status_counts": {
+      "Designated": 16412,
+      "Established": 279,
+      "Proposed": 222,
+      "Inscribed": 60,
+      "Adopted": 34,
+      "Not Reported": 2
+    },
+    "iucn_categories": {
+      "Not Reported": 5686,
+      "IV": 4228,
+      "V": 1603,
+      "Ia": 1565,
+      "Not Assigned": 1136,
+      "VI": 1057,
+      "II": 620,
+      "III": 478,
+      "Not Applicable": 424,
+      "Ib": 212
+    }
+  },
+  "cross_reference": {
+    "dark_events_by_gear": [],
+    "total_fishing_vessels_with_dark_events": 0
+  },
+  "timestamp": "2025-10-05T02:29:56.263871"
+}
