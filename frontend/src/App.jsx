@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { StatCard } from "./components/StatCard";
 import { EventItem } from "./components/EventItem";
 import { CommunityItem } from "./components/CommunityItem";
@@ -10,6 +10,7 @@ import { Section } from "./components/Section";
 import { LoadingSpinner } from "./components/LoadingSpinner";
 import { ErrorMessage } from "./components/ErrorMessage";
 import { EventMap } from "./components/EventMap";
+import { Pagination } from "./components/Pagination";
 
 const API_BASE = "http://localhost:5001/api";
 
@@ -63,6 +64,9 @@ export default function FishNetDashboard() {
   const [error, setError] = useState(null);
   const [selectedVessel, setSelectedVessel] = useState(null);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(25);
 
   useEffect(() => {
     loadAllData();
@@ -96,7 +100,7 @@ export default function FishNetDashboard() {
   };
 
   const loadEvents = async () => {
-    const response = await fetch(`${API_BASE}/suspicious-events?limit=100`);
+    const response = await fetch(`${API_BASE}/suspicious-events?limit=5000`);
     const data = await response.json();
     setAllEvents(data.events || []);
     setFilteredEvents(data.events || []);
@@ -134,6 +138,7 @@ export default function FishNetDashboard() {
 
   const handleFilter = (type) => {
     setActiveFilter(type);
+    setCurrentPage(1); // Reset to first page when filtering
     let filtered = allEvents;
 
     if (type === "high") {
@@ -145,6 +150,39 @@ export default function FishNetDashboard() {
     }
 
     setFilteredEvents(filtered);
+  };
+
+  // Search filtering
+  const searchedEvents = useMemo(() => {
+    if (!searchTerm.trim()) return filteredEvents;
+
+    const lowerSearch = searchTerm.toLowerCase();
+    return filteredEvents.filter((event) => {
+      return (
+        event.mmsi?.toString().includes(lowerSearch) ||
+        event.region?.toLowerCase().includes(lowerSearch) ||
+        event.vessel_name?.toLowerCase().includes(lowerSearch)
+      );
+    });
+  }, [filteredEvents, searchTerm]);
+
+  // Pagination calculations
+  const totalPages = Math.ceil(searchedEvents.length / itemsPerPage);
+  const paginatedEvents = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    return searchedEvents.slice(startIndex, startIndex + itemsPerPage);
+  }, [searchedEvents, currentPage, itemsPerPage]);
+
+  // Map events limited to 1000 for performance
+  const mapEvents = useMemo(() => allEvents.slice(0, 1000), [allEvents]);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(Math.max(1, Math.min(page, totalPages)));
+  };
+
+  const handleItemsPerPageChange = (newItemsPerPage) => {
+    setItemsPerPage(newItemsPerPage);
+    setCurrentPage(1);
   };
 
   const handleEventClick = async (event) => {
@@ -482,7 +520,7 @@ export default function FishNetDashboard() {
               Interactive Event Map
             </h2>
             <EventMap
-              events={allEvents}
+              events={mapEvents}
               hotspots={hotspots}
               onEventClick={handleEventClick}
             />
@@ -491,71 +529,130 @@ export default function FishNetDashboard() {
 
         {/* Events Tab */}
         {activeTab === "events" && (
-          <>
-            <h2
-              style={{
-                fontSize: "2.5em",
-                marginBottom: "20px",
-                color: "#00d4ff",
-              }}
-            >
-              Suspicious Dark Events
-            </h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              height: "calc(100vh - 60px)",
+            }}
+          >
+            {/* Fixed Header Section */}
+            <div style={{ flexShrink: 0 }}>
+              <h2
+                style={{
+                  fontSize: "2.5em",
+                  marginBottom: "15px",
+                  color: "#00d4ff",
+                }}
+              >
+                Suspicious Dark Events
+              </h2>
 
-            <div
-              style={{
-                display: "flex",
-                gap: "15px",
-                marginBottom: "20px",
-                flexWrap: "wrap",
-              }}
-            >
-              <FilterButton
-                active={activeFilter === "all"}
-                onClick={() => handleFilter("all")}
+              {/* Search Bar - Sticky */}
+              <div style={{ marginBottom: "15px" }}>
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    setCurrentPage(1);
+                  }}
+                  placeholder="🔍 Search by MMSI, region, or vessel name..."
+                  style={{
+                    width: "100%",
+                    padding: "12px 20px",
+                    background: "rgba(255, 255, 255, 0.05)",
+                    border: "1px solid rgba(0, 212, 255, 0.3)",
+                    borderRadius: "8px",
+                    color: "#fff",
+                    fontSize: "1em",
+                    outline: "none",
+                  }}
+                  onFocus={(e) =>
+                    (e.currentTarget.style.borderColor = "#00d4ff")
+                  }
+                  onBlur={(e) =>
+                    (e.currentTarget.style.borderColor =
+                      "rgba(0, 212, 255, 0.3)")
+                  }
+                />
+              </div>
+
+              {/* Filters - Sticky */}
+              <div
+                style={{
+                  display: "flex",
+                  gap: "15px",
+                  marginBottom: "15px",
+                  flexWrap: "wrap",
+                }}
               >
-                All Events
-              </FilterButton>
-              <FilterButton
-                active={activeFilter === "high"}
-                onClick={() => handleFilter("high")}
+                <FilterButton
+                  active={activeFilter === "all"}
+                  onClick={() => handleFilter("all")}
+                >
+                  All Events
+                </FilterButton>
+                <FilterButton
+                  active={activeFilter === "high"}
+                  onClick={() => handleFilter("high")}
+                >
+                  High Risk (≥0.7)
+                </FilterButton>
+                <FilterButton
+                  active={activeFilter === "fishing"}
+                  onClick={() => handleFilter("fishing")}
+                >
+                  Fishing Vessels
+                </FilterButton>
+                <FilterButton
+                  active={activeFilter === "rendezvous"}
+                  onClick={() => handleFilter("rendezvous")}
+                >
+                  Rendezvous Events
+                </FilterButton>
+              </div>
+
+              {/* Stats Bar - Sticky */}
+              <div
+                style={{
+                  color: "#aaa",
+                  fontSize: "0.9em",
+                  marginBottom: "12px",
+                  padding: "10px 15px",
+                  background: "rgba(0, 212, 255, 0.1)",
+                  borderRadius: "5px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
               >
-                High Risk (≥0.7)
-              </FilterButton>
-              <FilterButton
-                active={activeFilter === "fishing"}
-                onClick={() => handleFilter("fishing")}
-              >
-                Fishing Vessels
-              </FilterButton>
-              <FilterButton
-                active={activeFilter === "rendezvous"}
-                onClick={() => handleFilter("rendezvous")}
-              >
-                Rendezvous Events
-              </FilterButton>
+                <span>
+                  📊{" "}
+                  {searchTerm
+                    ? `Found ${searchedEvents.length} results`
+                    : `${filteredEvents.length} events`}
+                </span>
+                <span style={{ fontSize: "0.85em" }}>
+                  Total: {allEvents.length.toLocaleString()}
+                </span>
+              </div>
             </div>
 
+            {/* Scrollable Events List */}
             <div
               style={{
-                color: "#aaa",
-                fontSize: "0.9em",
-                marginBottom: "15px",
-                padding: "12px",
-                background: "rgba(0, 212, 255, 0.1)",
-                borderRadius: "5px",
+                flex: 1,
+                overflowY: "auto",
+                marginBottom: "10px",
+                paddingRight: "5px",
+                minHeight: 0,
               }}
             >
-              📊 Showing {filteredEvents.length} of {allEvents.length} events
-            </div>
-
-            <div
-              style={{ maxHeight: "calc(100vh - 300px)", overflowY: "auto" }}
-            >
-              {filteredEvents.length > 0 ? (
-                filteredEvents.map((event, idx) => (
+              {paginatedEvents.length > 0 ? (
+                paginatedEvents.map((event, idx) => (
                   <EventItem
-                    key={idx}
+                    key={`${event.mmsi}-${idx}`}
                     event={event}
                     onClick={handleEventClick}
                   />
@@ -569,11 +666,25 @@ export default function FishNetDashboard() {
                     fontSize: "1.2em",
                   }}
                 >
-                  No events match the selected filter
+                  {searchTerm
+                    ? "🔍 No events match your search"
+                    : "No events match the selected filter"}
                 </div>
               )}
             </div>
-          </>
+
+            {/* Bottom Pagination - Sticky */}
+            <div style={{ flexShrink: 0, paddingTop: "5px" }}>
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                totalItems={searchedEvents.length}
+                itemsPerPage={itemsPerPage}
+                onPageChange={handlePageChange}
+                onItemsPerPageChange={handleItemsPerPageChange}
+              />
+            </div>
+          </div>
         )}
 
         {/* High-Risk Vessels Tab */}
