@@ -3,3 +3,7 @@ node_modules/
 venv/
 __pycache__/
 *.__pycache__
+backend/app/contextualized_dark_events.json
+backend/app/proximity_index.json
+backend/app/proximity_index_partial.json
+backend/app/scored_dark_events.json
