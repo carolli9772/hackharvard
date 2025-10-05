@@ -1,17 +1,39 @@
+# FishNet Backend - Merged Requirements
+# Combines comprehensive risk scoring + network analysis features
+
+# Core Web Framework (FastAPI - modern and fast)
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+aiofiles==23.2.1
+
+# Core Data Processing
 pandas==2.1.3
-geopandas==0.14.1
 numpy==1.26.2
-scikit-learn==1.3.2
-python-dotenv==1.0.0
-sqlalchemy==2.0.23
-psycopg2-binary==2.9.9
+
+# Geospatial Analysis
+geopandas==0.14.1
 shapely==2.0.2
 pyproj==3.6.1
 geopy==2.4.1
+
+# Network Analysis (from main branch)
+networkx>=3.0
+scipy>=1.10.0
+
+# Machine Learning
+scikit-learn==1.3.2
+joblib==1.3.2
+
+# Database
+python-dotenv==1.0.0
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+
+# Data Validation
 pydantic==2.5.0
 pydantic-settings==2.1.0
-python-multipart==0.0.6
-aiofiles==23.2.1
-joblib==1.3.2
+
+# Visualization (optional, for generating graphs)
+matplotlib>=3.7.0
+seaborn>=0.12.0

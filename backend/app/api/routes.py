@@ -14,6 +14,8 @@ from ..models.schemas import (
 from ..services.dark_period_detector import DarkPeriodDetector
 from ..services.data_loader import DataLoader
 from ..services.comprehensive_detector import ComprehensiveIllegalFishingDetector
+from ..services.network_analyzer import VesselNetworkAnalyzer
+from ..services.hotspot_analyzer import HotspotAnalyzer
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -21,6 +23,8 @@ router = APIRouter()
 # Initialize services
 detector = DarkPeriodDetector()
 loader = DataLoader()
+network_analyzer = VesselNetworkAnalyzer(proximity_threshold_km=50.0)
+hotspot_analyzer = HotspotAnalyzer(grid_size_degrees=1.0)
 
 # Load MPA data once at startup
 logger.info("Loading Marine Protected Areas data...")
@@ -211,3 +215,200 @@ async def health_check():
         "mpa_data_loaded": len(mpa_data),
         "timestamp": datetime.utcnow()
     }
+
+
+# ========== NETWORK ANALYSIS ENDPOINTS ==========
+
+@router.get("/network/communities")
+async def get_vessel_communities(
+    sample_size: Optional[int] = Query(10000, description="Sample size per vessel type"),
+    min_risk: float = Query(0.3, description="Minimum risk threshold")
+):
+    """
+    Detect coordinated vessel communities using network analysis.
+    Returns clusters of vessels that frequently operate together during dark periods.
+    """
+    try:
+        # Load data and detect suspicious events
+        fishing_data = loader.load_all_fishing_vessels(sample_size_per_type=sample_size)
+        suspicious_events = comprehensive_detector.detect_illegal_activity(fishing_data)
+
+        # Filter by risk
+        suspicious_events_df = pd.DataFrame(suspicious_events)
+        suspicious_events_df = suspicious_events_df[suspicious_events_df['risk_score'] >= min_risk]
+
+        # Build network and detect communities
+        network_analyzer.build_network(suspicious_events_df, fishing_data)
+        communities = network_analyzer.detect_communities()
+
+        return {
+            "total_communities": len(communities),
+            "network_stats": network_analyzer.get_network_stats(),
+            "communities": communities
+        }
+
+    except Exception as e:
+        logger.error(f"Failed to detect communities: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/network/coordinators")
+async def get_coordinators(
+    sample_size: Optional[int] = Query(10000, description="Sample size per vessel type"),
+    min_risk: float = Query(0.3, description="Minimum risk threshold")
+):
+    """
+    Identify potential coordinator vessels that bridge different fishing groups.
+    These vessels may be organizing illegal fishing operations.
+    """
+    try:
+        # Load data and detect suspicious events
+        fishing_data = loader.load_all_fishing_vessels(sample_size_per_type=sample_size)
+        suspicious_events = comprehensive_detector.detect_illegal_activity(fishing_data)
+
+        # Filter by risk
+        suspicious_events_df = pd.DataFrame(suspicious_events)
+        suspicious_events_df = suspicious_events_df[suspicious_events_df['risk_score'] >= min_risk]
+
+        # Build network and identify coordinators
+        network_analyzer.build_network(suspicious_events_df, fishing_data)
+        coordinators = network_analyzer.identify_coordinators()
+
+        return {
+            "total_coordinators": len(coordinators),
+            "network_stats": network_analyzer.get_network_stats(),
+            "coordinators": coordinators[:20]  # Top 20
+        }
+
+    except Exception as e:
+        logger.error(f"Failed to identify coordinators: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/network/motherships")
+async def get_motherships(
+    sample_size: Optional[int] = Query(10000, description="Sample size per vessel type"),
+    min_risk: float = Query(0.3, description="Minimum risk threshold")
+):
+    """
+    Identify potential mothership vessels (non-fishing vessels supporting fishing operations).
+    Motherships may provide fuel, supplies, or transfer catch from fishing vessels.
+    """
+    try:
+        # Load data and detect suspicious events
+        fishing_data = loader.load_all_fishing_vessels(sample_size_per_type=sample_size)
+        suspicious_events = comprehensive_detector.detect_illegal_activity(fishing_data)
+
+        # Filter by risk
+        suspicious_events_df = pd.DataFrame(suspicious_events)
+        suspicious_events_df = suspicious_events_df[suspicious_events_df['risk_score'] >= min_risk]
+
+        # Build network and identify motherships
+        network_analyzer.build_network(suspicious_events_df, fishing_data)
+        motherships = network_analyzer.identify_motherships()
+
+        return {
+            "total_motherships": len(motherships),
+            "motherships": motherships
+        }
+
+    except Exception as e:
+        logger.error(f"Failed to identify motherships: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/hotspots")
+async def get_hotspots(
+    sample_size: Optional[int] = Query(10000, description="Sample size per vessel type"),
+    min_risk: float = Query(0.3, description="Minimum risk threshold"),
+    min_events: int = Query(3, description="Minimum events to form a hotspot"),
+    grid_size: float = Query(1.0, description="Grid size in degrees")
+):
+    """
+    Identify geographic hotspots of illegal fishing activity.
+    Returns areas with concentrated suspicious events.
+    """
+    try:
+        # Load data and detect suspicious events
+        fishing_data = loader.load_all_fishing_vessels(sample_size_per_type=sample_size)
+        suspicious_events = comprehensive_detector.detect_illegal_activity(fishing_data)
+
+        # Filter by risk
+        suspicious_events_df = pd.DataFrame(suspicious_events)
+        suspicious_events_df = suspicious_events_df[suspicious_events_df['risk_score'] >= min_risk]
+
+        # Analyze hotspots
+        hotspot_analyzer_temp = HotspotAnalyzer(grid_size_degrees=grid_size)
+        hotspots = hotspot_analyzer_temp.find_hotspots(suspicious_events_df, min_events=min_events)
+
+        return {
+            "total_hotspots": len(hotspots),
+            "grid_size_degrees": grid_size,
+            "min_events": min_events,
+            "hotspots": hotspots[:50]  # Top 50 hotspots
+        }
+
+    except Exception as e:
+        logger.error(f"Failed to find hotspots: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/hotspots/mpa-violations")
+async def get_mpa_violation_hotspots(
+    sample_size: Optional[int] = Query(10000, description="Sample size per vessel type"),
+    min_risk: float = Query(0.3, description="Minimum risk threshold")
+):
+    """
+    Identify hotspots specifically within Marine Protected Areas.
+    These represent the most serious violations.
+    """
+    try:
+        # Load data and detect suspicious events
+        fishing_data = loader.load_all_fishing_vessels(sample_size_per_type=sample_size)
+        suspicious_events = comprehensive_detector.detect_illegal_activity(fishing_data)
+
+        # Filter by risk
+        suspicious_events_df = pd.DataFrame(suspicious_events)
+        suspicious_events_df = suspicious_events_df[suspicious_events_df['risk_score'] >= min_risk]
+
+        # Find MPA violation hotspots
+        mpa_hotspots = hotspot_analyzer.find_mpa_violations(suspicious_events_df, mpa_data)
+
+        return {
+            "total_mpa_hotspots": len(mpa_hotspots),
+            "mpa_hotspots": mpa_hotspots
+        }
+
+    except Exception as e:
+        logger.error(f"Failed to find MPA violation hotspots: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/hotspots/temporal")
+async def get_temporal_patterns(
+    sample_size: Optional[int] = Query(10000, description="Sample size per vessel type"),
+    min_risk: float = Query(0.3, description="Minimum risk threshold")
+):
+    """
+    Analyze temporal patterns in illegal fishing activity (e.g., seasonal trends).
+    """
+    try:
+        # Load data and detect suspicious events
+        fishing_data = loader.load_all_fishing_vessels(sample_size_per_type=sample_size)
+        suspicious_events = comprehensive_detector.detect_illegal_activity(fishing_data)
+
+        # Filter by risk
+        suspicious_events_df = pd.DataFrame(suspicious_events)
+        suspicious_events_df = suspicious_events_df[suspicious_events_df['risk_score'] >= min_risk]
+
+        # Analyze temporal patterns
+        temporal_patterns = hotspot_analyzer.find_temporal_hotspots(suspicious_events_df)
+
+        return {
+            "total_patterns": len(temporal_patterns),
+            "temporal_patterns": temporal_patterns
+        }
+
+    except Exception as e:
+        logger.error(f"Failed to analyze temporal patterns: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
