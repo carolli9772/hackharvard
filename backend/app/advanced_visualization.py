@@ -172,12 +172,33 @@ def create_temporal_analysis(dark_events, output_path='temporal_analysis.png'):
     ax2.grid(True, alpha=0.3, axis='y')
 
     # Plot 3: Fishing vs Non-Fishing vessels
+        # --- Plot 3: Fishing vs Non-Fishing vessels ---
     ax3 = axes[1, 0]
-    fishing_counts = df.groupby('is_fishing_vessel').size()
-    labels = ['Non-Fishing', 'Fishing']
-    colors_pie = ['lightblue', 'orange']
-    ax3.pie(fishing_counts.values, labels=labels, autopct='%1.1f%%', colors=colors_pie, startangle=90)
+    fishing_counts = df['is_fishing_vessel'].value_counts(dropna=False)
+
+    # Dynamically generate labels from data
+    labels = [str(k) for k in fishing_counts.index]
+    colors_pie = sns.color_palette('Set2', n_colors=len(labels))
+
+    # If only one category, display text instead of pie
+    if len(fishing_counts) > 1:
+        ax3.pie(
+            fishing_counts.values,
+            labels=labels,
+            autopct='%1.1f%%',
+            colors=colors_pie,
+            startangle=90
+        )
+    else:
+        only_label = labels[0]
+        ax3.text(
+            0, 0, f"Only {only_label} vessels",
+            ha='center', va='center', fontsize=12, fontweight='bold'
+        )
+        ax3.set_aspect('equal')
+
     ax3.set_title('Dark Events: Fishing vs Non-Fishing Vessels', fontweight='bold')
+
 
     # Plot 4: Suspicion score distribution
     ax4 = axes[1, 1]

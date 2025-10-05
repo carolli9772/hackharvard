@@ -1,0 +1,1032 @@
+[
+  {
+    "grid_id": "46.7,-120.0",
+    "center": [
+      46.7,
+      -120.0
+    ],
+    "event_count": 18346,
+    "avg_suspicion_score": 0.336,
+    "unique_vessels": 1341
+  },
+  {
+    "grid_id": "23.3,-80.0",
+    "center": [
+      23.3,
+      -80.0
+    ],
+    "event_count": 8672,
+    "avg_suspicion_score": 0.339,
+    "unique_vessels": 820
+  },
+  {
+    "grid_id": "46.7,-123.3",
+    "center": [
+      46.7,
+      -123.3
+    ],
+    "event_count": 5535,
+    "avg_suspicion_score": 0.341,
+    "unique_vessels": 333
+  },
+  {
+    "grid_id": "26.7,-90.0",
+    "center": [
+      26.7,
+      -90.0
+    ],
+    "event_count": 5329,
+    "avg_suspicion_score": 0.34,
+    "unique_vessels": 457
+  },
+  {
+    "grid_id": "33.3,-116.7",
+    "center": [
+      33.3,
+      -116.7
+    ],
+    "event_count": 4827,
+    "avg_suspicion_score": 0.334,
+    "unique_vessels": 479
+  },
+  {
+    "grid_id": "26.7,-93.3",
+    "center": [
+      26.7,
+      -93.3
+    ],
+    "event_count": 4757,
+    "avg_suspicion_score": 0.337,
+    "unique_vessels": 372
+  },
+  {
+    "grid_id": "26.7,-80.0",
+    "center": [
+      26.7,
+      -80.0
+    ],
+    "event_count": 4211,
+    "avg_suspicion_score": 0.335,
+    "unique_vessels": 515
+  },
+  {
+    "grid_id": "16.7,-63.3",
+    "center": [
+      16.7,
+      -63.3
+    ],
+    "event_count": 3843,
+    "avg_suspicion_score": 0.338,
+    "unique_vessels": 406
+  },
+  {
+    "grid_id": "36.7,-73.3",
+    "center": [
+      36.7,
+      -73.3
+    ],
+    "event_count": 3148,
+    "avg_suspicion_score": 0.512,
+    "unique_vessels": 350
+  },
+  {
+    "grid_id": "30.0,-86.7",
+    "center": [
+      30.0,
+      -86.7
+    ],
+    "event_count": 2437,
+    "avg_suspicion_score": 0.334,
+    "unique_vessels": 198
+  },
+  {
+    "grid_id": "30.0,-116.7",
+    "center": [
+      30.0,
+      -116.7
+    ],
+    "event_count": 2325,
+    "avg_suspicion_score": 0.334,
+    "unique_vessels": 201
+  },
+  {
+    "grid_id": "30.0,-80.0",
+    "center": [
+      30.0,
+      -80.0
+    ],
+    "event_count": 1572,
+    "avg_suspicion_score": 0.332,
+    "unique_vessels": 173
+  },
+  {
+    "grid_id": "40.0,-70.0",
+    "center": [
+      40.0,
+      -70.0
+    ],
+    "event_count": 1474,
+    "avg_suspicion_score": 0.518,
+    "unique_vessels": 168
+  },
+  {
+    "grid_id": "36.7,-120.0",
+    "center": [
+      36.7,
+      -120.0
+    ],
+    "event_count": 1341,
+    "avg_suspicion_score": 0.513,
+    "unique_vessels": 154
+  },
+  {
+    "grid_id": "33.3,-76.7",
+    "center": [
+      33.3,
+      -76.7
+    ],
+    "event_count": 1339,
+    "avg_suspicion_score": 0.39,
+    "unique_vessels": 153
+  },
+  {
+    "grid_id": "30.0,-76.7",
+    "center": [
+      30.0,
+      -76.7
+    ],
+    "event_count": 1103,
+    "avg_suspicion_score": 0.338,
+    "unique_vessels": 108
+  },
+  {
+    "grid_id": "40.0,-73.3",
+    "center": [
+      40.0,
+      -73.3
+    ],
+    "event_count": 946,
+    "avg_suspicion_score": 0.517,
+    "unique_vessels": 127
+  },
+  {
+    "grid_id": "26.7,-86.7",
+    "center": [
+      26.7,
+      -86.7
+    ],
+    "event_count": 943,
+    "avg_suspicion_score": 0.34,
+    "unique_vessels": 157
+  },
+  {
+    "grid_id": "30.0,-90.0",
+    "center": [
+      30.0,
+      -90.0
+    ],
+    "event_count": 891,
+    "avg_suspicion_score": 0.334,
+    "unique_vessels": 108
+  },
+  {
+    "grid_id": "43.3,-120.0",
+    "center": [
+      43.3,
+      -120.0
+    ],
+    "event_count": 833,
+    "avg_suspicion_score": 0.328,
+    "unique_vessels": 91
+  },
+  {
+    "grid_id": "43.3,-123.3",
+    "center": [
+      43.3,
+      -123.3
+    ],
+    "event_count": 787,
+    "avg_suspicion_score": 0.446,
+    "unique_vessels": 98
+  },
+  {
+    "grid_id": "33.3,-73.3",
+    "center": [
+      33.3,
+      -73.3
+    ],
+    "event_count": 495,
+    "avg_suspicion_score": 0.462,
+    "unique_vessels": 87
+  },
+  {
+    "grid_id": "40.0,-86.7",
+    "center": [
+      40.0,
+      -86.7
+    ],
+    "event_count": 387,
+    "avg_suspicion_score": 0.529,
+    "unique_vessels": 42
+  },
+  {
+    "grid_id": "43.3,-76.7",
+    "center": [
+      43.3,
+      -76.7
+    ],
+    "event_count": 375,
+    "avg_suspicion_score": 0.528,
+    "unique_vessels": 19
+  },
+  {
+    "grid_id": "36.7,-90.0",
+    "center": [
+      36.7,
+      -90.0
+    ],
+    "event_count": 370,
+    "avg_suspicion_score": 0.512,
+    "unique_vessels": 54
+  },
+  {
+    "grid_id": "16.7,-60.0",
+    "center": [
+      16.7,
+      -60.0
+    ],
+    "event_count": 309,
+    "avg_suspicion_score": 0.325,
+    "unique_vessels": 63
+  },
+  {
+    "grid_id": "23.3,-83.3",
+    "center": [
+      23.3,
+      -83.3
+    ],
+    "event_count": 305,
+    "avg_suspicion_score": 0.344,
+    "unique_vessels": 61
+  },
+  {
+    "grid_id": "16.7,-66.7",
+    "center": [
+      16.7,
+      -66.7
+    ],
+    "event_count": 302,
+    "avg_suspicion_score": 0.33,
+    "unique_vessels": 56
+  },
+  {
+    "grid_id": "40.0,-80.0",
+    "center": [
+      40.0,
+      -80.0
+    ],
+    "event_count": 295,
+    "avg_suspicion_score": 0.522,
+    "unique_vessels": 27
+  },
+  {
+    "grid_id": "36.7,-80.0",
+    "center": [
+      36.7,
+      -80.0
+    ],
+    "event_count": 282,
+    "avg_suspicion_score": 0.525,
+    "unique_vessels": 34
+  },
+  {
+    "grid_id": "23.3,-96.7",
+    "center": [
+      23.3,
+      -96.7
+    ],
+    "event_count": 257,
+    "avg_suspicion_score": 0.344,
+    "unique_vessels": 27
+  },
+  {
+    "grid_id": "26.7,-96.7",
+    "center": [
+      26.7,
+      -96.7
+    ],
+    "event_count": 252,
+    "avg_suspicion_score": 0.312,
+    "unique_vessels": 62
+  },
+  {
+    "grid_id": "36.7,-76.7",
+    "center": [
+      36.7,
+      -76.7
+    ],
+    "event_count": 237,
+    "avg_suspicion_score": 0.513,
+    "unique_vessels": 25
+  },
+  {
+    "grid_id": "43.3,-66.7",
+    "center": [
+      43.3,
+      -66.7
+    ],
+    "event_count": 235,
+    "avg_suspicion_score": 0.51,
+    "unique_vessels": 38
+  },
+  {
+    "grid_id": "43.3,-73.3",
+    "center": [
+      43.3,
+      -73.3
+    ],
+    "event_count": 235,
+    "avg_suspicion_score": 0.518,
+    "unique_vessels": 16
+  },
+  {
+    "grid_id": "30.0,-83.3",
+    "center": [
+      30.0,
+      -83.3
+    ],
+    "event_count": 218,
+    "avg_suspicion_score": 0.332,
+    "unique_vessels": 34
+  },
+  {
+    "grid_id": "23.3,-76.7",
+    "center": [
+      23.3,
+      -76.7
+    ],
+    "event_count": 207,
+    "avg_suspicion_score": 0.312,
+    "unique_vessels": 80
+  },
+  {
+    "grid_id": "33.3,-86.7",
+    "center": [
+      33.3,
+      -86.7
+    ],
+    "event_count": 200,
+    "avg_suspicion_score": 0.515,
+    "unique_vessels": 42
+  },
+  {
+    "grid_id": "33.3,-120.0",
+    "center": [
+      33.3,
+      -120.0
+    ],
+    "event_count": 200,
+    "avg_suspicion_score": 0.484,
+    "unique_vessels": 12
+  },
+  {
+    "grid_id": "26.7,-83.3",
+    "center": [
+      26.7,
+      -83.3
+    ],
+    "event_count": 186,
+    "avg_suspicion_score": 0.339,
+    "unique_vessels": 39
+  },
+  {
+    "grid_id": "40.0,-76.7",
+    "center": [
+      40.0,
+      -76.7
+    ],
+    "event_count": 181,
+    "avg_suspicion_score": 0.518,
+    "unique_vessels": 18
+  },
+  {
+    "grid_id": "33.3,-90.0",
+    "center": [
+      33.3,
+      -90.0
+    ],
+    "event_count": 177,
+    "avg_suspicion_score": 0.348,
+    "unique_vessels": 34
+  },
+  {
+    "grid_id": "26.7,-76.7",
+    "center": [
+      26.7,
+      -76.7
+    ],
+    "event_count": 151,
+    "avg_suspicion_score": 0.323,
+    "unique_vessels": 43
+  },
+  {
+    "grid_id": "20.0,-156.7",
+    "center": [
+      20.0,
+      -156.7
+    ],
+    "event_count": 134,
+    "avg_suspicion_score": 0.318,
+    "unique_vessels": 48
+  },
+  {
+    "grid_id": "23.3,-93.3",
+    "center": [
+      23.3,
+      -93.3
+    ],
+    "event_count": 118,
+    "avg_suspicion_score": 0.343,
+    "unique_vessels": 16
+  },
+  {
+    "grid_id": "46.7,-90.0",
+    "center": [
+      46.7,
+      -90.0
+    ],
+    "event_count": 113,
+    "avg_suspicion_score": 0.336,
+    "unique_vessels": 6
+  },
+  {
+    "grid_id": "40.0,-66.7",
+    "center": [
+      40.0,
+      -66.7
+    ],
+    "event_count": 112,
+    "avg_suspicion_score": 0.513,
+    "unique_vessels": 26
+  },
+  {
+    "grid_id": "46.7,-126.7",
+    "center": [
+      46.7,
+      -126.7
+    ],
+    "event_count": 109,
+    "avg_suspicion_score": 0.323,
+    "unique_vessels": 23
+  },
+  {
+    "grid_id": "43.3,-63.3",
+    "center": [
+      43.3,
+      -63.3
+    ],
+    "event_count": 66,
+    "avg_suspicion_score": 0.398,
+    "unique_vessels": 12
+  },
+  {
+    "grid_id": "46.7,-86.7",
+    "center": [
+      46.7,
+      -86.7
+    ],
+    "event_count": 63,
+    "avg_suspicion_score": 0.347,
+    "unique_vessels": 5
+  },
+  {
+    "grid_id": "40.0,-123.3",
+    "center": [
+      40.0,
+      -123.3
+    ],
+    "event_count": 60,
+    "avg_suspicion_score": 0.477,
+    "unique_vessels": 17
+  },
+  {
+    "grid_id": "13.3,-63.3",
+    "center": [
+      13.3,
+      -63.3
+    ],
+    "event_count": 50,
+    "avg_suspicion_score": 0.315,
+    "unique_vessels": 13
+  },
+  {
+    "grid_id": "20.0,-80.0",
+    "center": [
+      20.0,
+      -80.0
+    ],
+    "event_count": 46,
+    "avg_suspicion_score": 0.353,
+    "unique_vessels": 14
+  },
+  {
+    "grid_id": "16.7,-70.0",
+    "center": [
+      16.7,
+      -70.0
+    ],
+    "event_count": 42,
+    "avg_suspicion_score": 0.357,
+    "unique_vessels": 9
+  },
+  {
+    "grid_id": "20.0,-66.7",
+    "center": [
+      20.0,
+      -66.7
+    ],
+    "event_count": 38,
+    "avg_suspicion_score": 0.292,
+    "unique_vessels": 10
+  },
+  {
+    "grid_id": "13.3,-66.7",
+    "center": [
+      13.3,
+      -66.7
+    ],
+    "event_count": 36,
+    "avg_suspicion_score": 0.333,
+    "unique_vessels": 9
+  },
+  {
+    "grid_id": "43.3,-83.3",
+    "center": [
+      43.3,
+      -83.3
+    ],
+    "event_count": 34,
+    "avg_suspicion_score": 0.515,
+    "unique_vessels": 3
+  },
+  {
+    "grid_id": "43.3,-86.7",
+    "center": [
+      43.3,
+      -86.7
+    ],
+    "event_count": 32,
+    "avg_suspicion_score": 0.532,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "43.3,-70.0",
+    "center": [
+      43.3,
+      -70.0
+    ],
+    "event_count": 30,
+    "avg_suspicion_score": 0.524,
+    "unique_vessels": 12
+  },
+  {
+    "grid_id": "43.3,-126.7",
+    "center": [
+      43.3,
+      -126.7
+    ],
+    "event_count": 27,
+    "avg_suspicion_score": 0.443,
+    "unique_vessels": 5
+  },
+  {
+    "grid_id": "30.0,-110.0",
+    "center": [
+      30.0,
+      -110.0
+    ],
+    "event_count": 23,
+    "avg_suspicion_score": 0.348,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "36.7,-70.0",
+    "center": [
+      36.7,
+      -70.0
+    ],
+    "event_count": 22,
+    "avg_suspicion_score": 0.5,
+    "unique_vessels": 11
+  },
+  {
+    "grid_id": "20.0,-153.3",
+    "center": [
+      20.0,
+      -153.3
+    ],
+    "event_count": 22,
+    "avg_suspicion_score": 0.301,
+    "unique_vessels": 8
+  },
+  {
+    "grid_id": "20.0,-63.3",
+    "center": [
+      20.0,
+      -63.3
+    ],
+    "event_count": 20,
+    "avg_suspicion_score": 0.318,
+    "unique_vessels": 7
+  },
+  {
+    "grid_id": "33.3,-123.3",
+    "center": [
+      33.3,
+      -123.3
+    ],
+    "event_count": 18,
+    "avg_suspicion_score": 0.34,
+    "unique_vessels": 8
+  },
+  {
+    "grid_id": "30.0,-120.0",
+    "center": [
+      30.0,
+      -120.0
+    ],
+    "event_count": 18,
+    "avg_suspicion_score": 0.316,
+    "unique_vessels": 5
+  },
+  {
+    "grid_id": "13.3,-70.0",
+    "center": [
+      13.3,
+      -70.0
+    ],
+    "event_count": 17,
+    "avg_suspicion_score": 0.333,
+    "unique_vessels": 8
+  },
+  {
+    "grid_id": "16.7,-156.7",
+    "center": [
+      16.7,
+      -156.7
+    ],
+    "event_count": 16,
+    "avg_suspicion_score": 0.292,
+    "unique_vessels": 4
+  },
+  {
+    "grid_id": "23.3,-86.7",
+    "center": [
+      23.3,
+      -86.7
+    ],
+    "event_count": 15,
+    "avg_suspicion_score": 0.374,
+    "unique_vessels": 10
+  },
+  {
+    "grid_id": "36.7,-123.3",
+    "center": [
+      36.7,
+      -123.3
+    ],
+    "event_count": 15,
+    "avg_suspicion_score": 0.486,
+    "unique_vessels": 6
+  },
+  {
+    "grid_id": "43.3,-80.0",
+    "center": [
+      43.3,
+      -80.0
+    ],
+    "event_count": 12,
+    "avg_suspicion_score": 0.421,
+    "unique_vessels": 4
+  },
+  {
+    "grid_id": "30.0,-93.3",
+    "center": [
+      30.0,
+      -93.3
+    ],
+    "event_count": 12,
+    "avg_suspicion_score": 0.245,
+    "unique_vessels": 7
+  },
+  {
+    "grid_id": "13.3,143.3",
+    "center": [
+      13.3,
+      143.3
+    ],
+    "event_count": 10,
+    "avg_suspicion_score": 0.369,
+    "unique_vessels": 7
+  },
+  {
+    "grid_id": "16.7,-153.3",
+    "center": [
+      16.7,
+      -153.3
+    ],
+    "event_count": 9,
+    "avg_suspicion_score": 0.328,
+    "unique_vessels": 3
+  },
+  {
+    "grid_id": "10.0,143.3",
+    "center": [
+      10.0,
+      143.3
+    ],
+    "event_count": 9,
+    "avg_suspicion_score": 0.327,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "50.0,-123.3",
+    "center": [
+      50.0,
+      -123.3
+    ],
+    "event_count": 8,
+    "avg_suspicion_score": 0.379,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "20.0,-83.3",
+    "center": [
+      20.0,
+      -83.3
+    ],
+    "event_count": 8,
+    "avg_suspicion_score": 0.388,
+    "unique_vessels": 5
+  },
+  {
+    "grid_id": "40.0,-126.7",
+    "center": [
+      40.0,
+      -126.7
+    ],
+    "event_count": 7,
+    "avg_suspicion_score": 0.49,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "13.3,-60.0",
+    "center": [
+      13.3,
+      -60.0
+    ],
+    "event_count": 7,
+    "avg_suspicion_score": 0.329,
+    "unique_vessels": 3
+  },
+  {
+    "grid_id": "30.0,-113.3",
+    "center": [
+      30.0,
+      -113.3
+    ],
+    "event_count": 7,
+    "avg_suspicion_score": 0.298,
+    "unique_vessels": 3
+  },
+  {
+    "grid_id": "36.7,-66.7",
+    "center": [
+      36.7,
+      -66.7
+    ],
+    "event_count": 6,
+    "avg_suspicion_score": 0.482,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "0.0,-63.3",
+    "center": [
+      0.0,
+      -63.3
+    ],
+    "event_count": 5,
+    "avg_suspicion_score": 0.523,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "40.0,-83.3",
+    "center": [
+      40.0,
+      -83.3
+    ],
+    "event_count": 5,
+    "avg_suspicion_score": 0.387,
+    "unique_vessels": 4
+  },
+  {
+    "grid_id": "26.7,-110.0",
+    "center": [
+      26.7,
+      -110.0
+    ],
+    "event_count": 5,
+    "avg_suspicion_score": 0.35,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "40.0,-63.3",
+    "center": [
+      40.0,
+      -63.3
+    ],
+    "event_count": 4,
+    "avg_suspicion_score": 0.508,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "10.0,140.0",
+    "center": [
+      10.0,
+      140.0
+    ],
+    "event_count": 4,
+    "avg_suspicion_score": 0.331,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "23.3,-90.0",
+    "center": [
+      23.3,
+      -90.0
+    ],
+    "event_count": 4,
+    "avg_suspicion_score": 0.373,
+    "unique_vessels": 4
+  },
+  {
+    "grid_id": "20.0,-60.0",
+    "center": [
+      20.0,
+      -60.0
+    ],
+    "event_count": 4,
+    "avg_suspicion_score": 0.334,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "30.0,-73.3",
+    "center": [
+      30.0,
+      -73.3
+    ],
+    "event_count": 3,
+    "avg_suspicion_score": 0.332,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "20.0,-76.7",
+    "center": [
+      20.0,
+      -76.7
+    ],
+    "event_count": 3,
+    "avg_suspicion_score": 0.289,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "36.7,-86.7",
+    "center": [
+      36.7,
+      -86.7
+    ],
+    "event_count": 2,
+    "avg_suspicion_score": 0.487,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "23.3,-63.3",
+    "center": [
+      23.3,
+      -63.3
+    ],
+    "event_count": 2,
+    "avg_suspicion_score": 0.339,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "23.3,-153.3",
+    "center": [
+      23.3,
+      -153.3
+    ],
+    "event_count": 2,
+    "avg_suspicion_score": 0.277,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "23.3,-156.7",
+    "center": [
+      23.3,
+      -156.7
+    ],
+    "event_count": 2,
+    "avg_suspicion_score": 0.278,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "23.3,-73.3",
+    "center": [
+      23.3,
+      -73.3
+    ],
+    "event_count": 2,
+    "avg_suspicion_score": 0.262,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "26.7,-73.3",
+    "center": [
+      26.7,
+      -73.3
+    ],
+    "event_count": 2,
+    "avg_suspicion_score": 0.208,
+    "unique_vessels": 2
+  },
+  {
+    "grid_id": "36.7,-83.3",
+    "center": [
+      36.7,
+      -83.3
+    ],
+    "event_count": 1,
+    "avg_suspicion_score": 0.531,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "33.3,-70.0",
+    "center": [
+      33.3,
+      -70.0
+    ],
+    "event_count": 1,
+    "avg_suspicion_score": 0.445,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "30.0,-106.7",
+    "center": [
+      30.0,
+      -106.7
+    ],
+    "event_count": 1,
+    "avg_suspicion_score": 0.442,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "33.3,-100.0",
+    "center": [
+      33.3,
+      -100.0
+    ],
+    "event_count": 1,
+    "avg_suspicion_score": 0.318,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "46.7,-116.7",
+    "center": [
+      46.7,
+      -116.7
+    ],
+    "event_count": 1,
+    "avg_suspicion_score": 0.268,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "43.3,-90.0",
+    "center": [
+      43.3,
+      -90.0
+    ],
+    "event_count": 1,
+    "avg_suspicion_score": 0.204,
+    "unique_vessels": 1
+  },
+  {
+    "grid_id": "30.0,-123.3",
+    "center": [
+      30.0,
+      -123.3
+    ],
+    "event_count": 1,
+    "avg_suspicion_score": 0.196,
+    "unique_vessels": 1
+  }
+]
