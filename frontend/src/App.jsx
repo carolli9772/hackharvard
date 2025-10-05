@@ -14,7 +14,6 @@ import { Pagination } from "./components/Pagination";
 
 const API_BASE = "http://localhost:5001/api";
 
-// Sidebar Navigation Item
 const SidebarItem = ({ active, onClick, icon, children }) => (
   <div
     onClick={onClick}
@@ -53,6 +52,7 @@ export default function FishNetDashboard() {
   const [stats, setStats] = useState(null);
   const [allEvents, setAllEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
+  const [mapEvents, setMapEvents] = useState([]);
   const [communities, setCommunities] = useState([]);
   const [hotspots, setHotspots] = useState([]);
   const [coordinators, setCoordinators] = useState([]);
@@ -78,6 +78,7 @@ export default function FishNetDashboard() {
       await Promise.all([
         loadStats(),
         loadEvents(),
+        loadMapEvents(),
         loadCommunities(),
         loadHotspots(),
         loadCoordinators(),
@@ -100,10 +101,18 @@ export default function FishNetDashboard() {
   };
 
   const loadEvents = async () => {
-    const response = await fetch(`${API_BASE}/suspicious-events?limit=5000`);
+    const response = await fetch(`${API_BASE}/suspicious-events?limit=100000`);
     const data = await response.json();
     setAllEvents(data.events || []);
     setFilteredEvents(data.events || []);
+  };
+
+  const loadMapEvents = async () => {
+    const response = await fetch(
+      `${API_BASE}/suspicious-events/top?limit=5000`
+    );
+    const data = await response.json();
+    setMapEvents(data.events || []);
   };
 
   const loadCommunities = async () => {
@@ -138,7 +147,7 @@ export default function FishNetDashboard() {
 
   const handleFilter = (type) => {
     setActiveFilter(type);
-    setCurrentPage(1); // Reset to first page when filtering
+    setCurrentPage(1);
     let filtered = allEvents;
 
     if (type === "high") {
@@ -152,10 +161,8 @@ export default function FishNetDashboard() {
     setFilteredEvents(filtered);
   };
 
-  // Search filtering
   const searchedEvents = useMemo(() => {
     if (!searchTerm.trim()) return filteredEvents;
-
     const lowerSearch = searchTerm.toLowerCase();
     return filteredEvents.filter((event) => {
       return (
@@ -166,15 +173,11 @@ export default function FishNetDashboard() {
     });
   }, [filteredEvents, searchTerm]);
 
-  // Pagination calculations
   const totalPages = Math.ceil(searchedEvents.length / itemsPerPage);
   const paginatedEvents = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     return searchedEvents.slice(startIndex, startIndex + itemsPerPage);
   }, [searchedEvents, currentPage, itemsPerPage]);
-
-  // Map events limited to 1000 for performance
-  const mapEvents = useMemo(() => allEvents.slice(0, 1000), [allEvents]);
 
   const handlePageChange = (page) => {
     setCurrentPage(Math.max(1, Math.min(page, totalPages)));
@@ -228,7 +231,6 @@ export default function FishNetDashboard() {
         display: "flex",
       }}
     >
-      {/* Sidebar */}
       <div
         style={{
           width: sidebarCollapsed ? "80px" : "280px",
@@ -242,7 +244,6 @@ export default function FishNetDashboard() {
           zIndex: 100,
         }}
       >
-        {/* Logo/Header */}
         <div
           style={{
             padding: "25px 20px",
@@ -272,7 +273,6 @@ export default function FishNetDashboard() {
           )}
         </div>
 
-        {/* Navigation */}
         <div style={{ padding: "20px 0" }}>
           <SidebarItem
             active={activeTab === "overview"}
@@ -296,22 +296,14 @@ export default function FishNetDashboard() {
             {!sidebarCollapsed && "Dark Events"}
           </SidebarItem>
           <SidebarItem
-            active={activeTab === "vessels"}
-            onClick={() => setActiveTab("vessels")}
-            icon="🚢"
+            active={activeTab === "hotspots"}
+            onClick={() => setActiveTab("hotspots")}
+            icon="🔥"
           >
-            {!sidebarCollapsed && "High-Risk Vessels"}
-          </SidebarItem>
-          <SidebarItem
-            active={activeTab === "network"}
-            onClick={() => setActiveTab("network")}
-            icon="🌐"
-          >
-            {!sidebarCollapsed && "Network Analysis"}
+            {!sidebarCollapsed && "Hotspots"}
           </SidebarItem>
         </div>
 
-        {/* Collapse Button */}
         <div
           style={{
             position: "absolute",
@@ -337,38 +329,35 @@ export default function FishNetDashboard() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div
         style={{
           marginLeft: sidebarCollapsed ? "80px" : "280px",
           width: `calc(100% - ${sidebarCollapsed ? "80px" : "280px"})`,
           transition: "margin-left 0.3s, width 0.3s",
-          padding: "30px",
-          overflowY: "auto",
+          padding: "20px",
+          overflow: "hidden",
           height: "100vh",
         }}
       >
         {error && <ErrorMessage message={error} />}
 
-        {/* Overview Tab */}
         {activeTab === "overview" && (
           <>
             <h2
               style={{
                 fontSize: "2.5em",
-                marginBottom: "30px",
+                marginBottom: "20px",
                 color: "#00d4ff",
               }}
             >
               Dashboard Overview
             </h2>
-
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
                 gap: "20px",
-                marginBottom: "40px",
+                marginBottom: "25px",
               }}
             >
               {stats && (
@@ -383,26 +372,15 @@ export default function FishNetDashboard() {
                     label="High Suspicion"
                     value={stats.high_suspicion_events?.toLocaleString() || "0"}
                   />
-                  <StatCard
-                    icon="🎣"
-                    label="Fishing Vessels"
-                    value={stats.fishing_vessel_events?.toLocaleString() || "0"}
-                  />
-                  <StatCard
-                    icon="🚢"
-                    label="Motherships"
-                    value={stats.potential_motherships?.toLocaleString() || "0"}
-                  />
                 </>
               )}
             </div>
-
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
-                gap: "30px",
-                marginBottom: "30px",
+                gap: "20px",
+                paddingBottom: "20px",
               }}
             >
               <Section title="🔥 Top Hotspots">
@@ -412,7 +390,6 @@ export default function FishNetDashboard() {
                   ))}
                 </div>
               </Section>
-
               <Section title="⚠️ Recent High-Risk Events">
                 <div style={{ maxHeight: "350px", overflowY: "auto" }}>
                   {allEvents
@@ -428,115 +405,53 @@ export default function FishNetDashboard() {
                 </div>
               </Section>
             </div>
-
-            {networkStats && (
-              <Section title="📊 Network Summary">
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(3, 1fr)",
-                    gap: "15px",
-                  }}
-                >
-                  <div
-                    style={{
-                      padding: "20px",
-                      background: "rgba(0, 212, 255, 0.1)",
-                      borderRadius: "10px",
-                      textAlign: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: "#00d4ff",
-                        fontSize: "2em",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {networkStats.total_vessels}
-                    </div>
-                    <div style={{ color: "#aaa", fontSize: "0.9em" }}>
-                      Vessels in Network
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      padding: "20px",
-                      background: "rgba(0, 212, 255, 0.1)",
-                      borderRadius: "10px",
-                      textAlign: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: "#00d4ff",
-                        fontSize: "2em",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {networkStats.total_communities}
-                    </div>
-                    <div style={{ color: "#aaa", fontSize: "0.9em" }}>
-                      Communities
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      padding: "20px",
-                      background: "rgba(255, 165, 0, 0.1)",
-                      borderRadius: "10px",
-                      textAlign: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: "#ffa500",
-                        fontSize: "2em",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {networkStats.suspicious_fleets}
-                    </div>
-                    <div style={{ color: "#aaa", fontSize: "0.9em" }}>
-                      Suspicious Fleets
-                    </div>
-                  </div>
-                </div>
-              </Section>
-            )}
           </>
         )}
 
-        {/* Map Tab */}
         {activeTab === "map" && (
           <>
             <h2
               style={{
                 fontSize: "2.5em",
-                marginBottom: "20px",
+                marginBottom: "15px",
                 color: "#00d4ff",
               }}
             >
               Interactive Event Map
             </h2>
-            <EventMap
-              events={mapEvents}
-              hotspots={hotspots}
-              onEventClick={handleEventClick}
-            />
+            <div
+              style={{
+                padding: "10px 15px",
+                background: "rgba(0, 212, 255, 0.1)",
+                borderRadius: "8px",
+                marginBottom: "15px",
+                border: "1px solid rgba(0, 212, 255, 0.3)",
+              }}
+            >
+              <strong style={{ color: "#00d4ff" }}>💡 Smart Loading:</strong>
+              <span style={{ color: "#ccc", marginLeft: "10px" }}>
+                Events load dynamically based on your zoom level and visible
+                area. Zoom in to see more detail!
+              </span>
+            </div>
+            <div style={{ paddingBottom: "20px" }}>
+              <EventMap
+                events={mapEvents}
+                hotspots={hotspots}
+                onEventClick={handleEventClick}
+              />
+            </div>
           </>
         )}
 
-        {/* Events Tab */}
         {activeTab === "events" && (
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              height: "calc(100vh - 60px)",
+              height: "calc(100vh - 40px)",
             }}
           >
-            {/* Fixed Header Section */}
             <div style={{ flexShrink: 0 }}>
               <h2
                 style={{
@@ -547,8 +462,6 @@ export default function FishNetDashboard() {
               >
                 Suspicious Dark Events
               </h2>
-
-              {/* Search Bar - Sticky */}
               <div style={{ marginBottom: "15px" }}>
                 <input
                   type="text"
@@ -577,8 +490,6 @@ export default function FishNetDashboard() {
                   }
                 />
               </div>
-
-              {/* Filters - Sticky */}
               <div
                 style={{
                   display: "flex",
@@ -599,21 +510,7 @@ export default function FishNetDashboard() {
                 >
                   High Risk (≥0.7)
                 </FilterButton>
-                <FilterButton
-                  active={activeFilter === "fishing"}
-                  onClick={() => handleFilter("fishing")}
-                >
-                  Fishing Vessels
-                </FilterButton>
-                <FilterButton
-                  active={activeFilter === "rendezvous"}
-                  onClick={() => handleFilter("rendezvous")}
-                >
-                  Rendezvous Events
-                </FilterButton>
               </div>
-
-              {/* Stats Bar - Sticky */}
               <div
                 style={{
                   color: "#aaa",
@@ -638,8 +535,6 @@ export default function FishNetDashboard() {
                 </span>
               </div>
             </div>
-
-            {/* Scrollable Events List */}
             <div
               style={{
                 flex: 1,
@@ -672,8 +567,6 @@ export default function FishNetDashboard() {
                 </div>
               )}
             </div>
-
-            {/* Bottom Pagination - Sticky */}
             <div style={{ flexShrink: 0, paddingTop: "5px" }}>
               <Pagination
                 currentPage={currentPage}
@@ -687,294 +580,52 @@ export default function FishNetDashboard() {
           </div>
         )}
 
-        {/* High-Risk Vessels Tab */}
-        {activeTab === "vessels" && (
-          <>
-            <h2
+        {activeTab === "hotspots" && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              height: "calc(100vh - 40px)",
+            }}
+          >
+            <div style={{ flexShrink: 0 }}>
+              <h2
+                style={{
+                  fontSize: "2.5em",
+                  marginBottom: "20px",
+                  color: "#00d4ff",
+                }}
+              >
+                Dark Zone Hotspots
+              </h2>
+            </div>
+            <div
               style={{
-                fontSize: "2.5em",
-                marginBottom: "30px",
-                color: "#00d4ff",
+                flex: 1,
+                overflowY: "auto",
+                paddingRight: "5px",
+                minHeight: 0,
               }}
             >
-              High-Risk Vessels
-            </h2>
-
-            {motherships.length > 0 && (
-              <div style={{ marginBottom: "30px" }}>
-                <h3
+              {hotspots.length > 0 && (
+                <div
                   style={{
-                    color: "#ff3838",
-                    marginBottom: "15px",
-                    fontSize: "1.5em",
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                    gap: "20px",
+                    paddingBottom: "20px",
                   }}
                 >
-                  🚢 Potential Motherships
-                </h3>
-                <div style={{ maxHeight: "400px", overflowY: "auto" }}>
-                  {motherships.map((mothership, idx) => (
-                    <MothershipItem
-                      key={idx}
-                      mothership={mothership}
-                      onClick={handleEventClick}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {coordinators.length > 0 && (
-              <div style={{ marginBottom: "30px" }}>
-                <h3
-                  style={{
-                    color: "#ffa500",
-                    marginBottom: "15px",
-                    fontSize: "1.5em",
-                  }}
-                >
-                  🎯 Coordinator Vessels
-                </h3>
-                <div style={{ maxHeight: "400px", overflowY: "auto" }}>
-                  {coordinators.map((coordinator, idx) => (
-                    <CoordinatorItem
-                      key={idx}
-                      coordinator={coordinator}
-                      onClick={handleEventClick}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {hotspots.length > 0 && (
-              <div>
-                <h3
-                  style={{
-                    color: "#00d4ff",
-                    marginBottom: "15px",
-                    fontSize: "1.5em",
-                  }}
-                >
-                  🔥 Dark Zone Hotspots
-                </h3>
-                <div style={{ maxHeight: "400px", overflowY: "auto" }}>
                   {hotspots.map((hotspot, idx) => (
                     <HotspotItem key={idx} hotspot={hotspot} />
                   ))}
                 </div>
-              </div>
-            )}
-          </>
-        )}
-
-        {/* Network Analysis Tab */}
-        {activeTab === "network" && (
-          <>
-            <h2
-              style={{
-                fontSize: "2.5em",
-                marginBottom: "30px",
-                color: "#00d4ff",
-              }}
-            >
-              Network Analysis
-            </h2>
-
-            {networkStats && (
-              <div style={{ marginBottom: "30px" }}>
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                    gap: "20px",
-                  }}
-                >
-                  <div
-                    style={{
-                      padding: "25px",
-                      background: "rgba(0, 212, 255, 0.1)",
-                      borderRadius: "15px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: "#00d4ff",
-                        fontSize: "2.5em",
-                        fontWeight: "bold",
-                        marginBottom: "10px",
-                      }}
-                    >
-                      {networkStats.total_vessels}
-                    </div>
-                    <div
-                      style={{
-                        color: "#fff",
-                        fontSize: "1.1em",
-                        marginBottom: "5px",
-                      }}
-                    >
-                      Total Vessels
-                    </div>
-                    <div style={{ color: "#aaa", fontSize: "0.85em" }}>
-                      Vessels with dark event connections
-                    </div>
-                  </div>
-
-                  <div
-                    style={{
-                      padding: "25px",
-                      background: "rgba(0, 212, 255, 0.1)",
-                      borderRadius: "15px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: "#00d4ff",
-                        fontSize: "2.5em",
-                        fontWeight: "bold",
-                        marginBottom: "10px",
-                      }}
-                    >
-                      {networkStats.total_communities}
-                    </div>
-                    <div
-                      style={{
-                        color: "#fff",
-                        fontSize: "1.1em",
-                        marginBottom: "5px",
-                      }}
-                    >
-                      Communities
-                    </div>
-                    <div style={{ color: "#aaa", fontSize: "0.85em" }}>
-                      Detected vessel groups
-                    </div>
-                  </div>
-
-                  <div
-                    style={{
-                      padding: "25px",
-                      background: "rgba(255, 165, 0, 0.1)",
-                      borderRadius: "15px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: "#ffa500",
-                        fontSize: "2.5em",
-                        fontWeight: "bold",
-                        marginBottom: "10px",
-                      }}
-                    >
-                      {networkStats.suspicious_fleets}
-                    </div>
-                    <div
-                      style={{
-                        color: "#fff",
-                        fontSize: "1.1em",
-                        marginBottom: "5px",
-                      }}
-                    >
-                      Suspicious Fleets
-                    </div>
-                    <div style={{ color: "#aaa", fontSize: "0.85em" }}>
-                      High-risk communities
-                    </div>
-                  </div>
-
-                  <div
-                    style={{
-                      padding: "25px",
-                      background: "rgba(0, 255, 136, 0.1)",
-                      borderRadius: "15px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: "#00ff88",
-                        fontSize: "2.5em",
-                        fontWeight: "bold",
-                        marginBottom: "10px",
-                      }}
-                    >
-                      {networkStats.avg_degree_centrality?.toFixed(3)}
-                    </div>
-                    <div
-                      style={{
-                        color: "#fff",
-                        fontSize: "1.1em",
-                        marginBottom: "5px",
-                      }}
-                    >
-                      Avg Degree
-                    </div>
-                    <div style={{ color: "#aaa", fontSize: "0.85em" }}>
-                      Connection density
-                    </div>
-                  </div>
-
-                  <div
-                    style={{
-                      padding: "25px",
-                      background: "rgba(0, 255, 136, 0.1)",
-                      borderRadius: "15px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        color: "#00ff88",
-                        fontSize: "2.5em",
-                        fontWeight: "bold",
-                        marginBottom: "10px",
-                      }}
-                    >
-                      {networkStats.avg_betweenness_centrality?.toFixed(3)}
-                    </div>
-                    <div
-                      style={{
-                        color: "#fff",
-                        fontSize: "1.1em",
-                        marginBottom: "5px",
-                      }}
-                    >
-                      Avg Betweenness
-                    </div>
-                    <div style={{ color: "#aaa", fontSize: "0.85em" }}>
-                      Network bridge importance
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {communities.length > 0 && (
-              <div>
-                <h3
-                  style={{
-                    color: "#00d4ff",
-                    marginBottom: "15px",
-                    fontSize: "1.8em",
-                  }}
-                >
-                  🌐 Suspicious Communities
-                </h3>
-                <div
-                  style={{
-                    maxHeight: "calc(100vh - 500px)",
-                    overflowY: "auto",
-                  }}
-                >
-                  {communities.map((community, idx) => (
-                    <CommunityItem key={idx} community={community} />
-                  ))}
-                </div>
-              </div>
-            )}
-          </>
+              )}
+            </div>
+          </div>
         )}
       </div>
 
-      {/* Vessel Details Modal */}
       {selectedVessel && (
         <div
           style={{
@@ -989,6 +640,7 @@ export default function FishNetDashboard() {
             justifyContent: "center",
             zIndex: 2000,
             padding: "20px",
+            overflow: "hidden",
           }}
           onClick={() => setSelectedVessel(null)}
         >
@@ -996,11 +648,12 @@ export default function FishNetDashboard() {
             style={{
               background: "linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%)",
               borderRadius: "15px",
-              padding: "50px 30px 30px 30px",
+              padding: "30px",
               maxWidth: "900px",
               width: "100%",
-              maxHeight: "90vh",
-              overflowY: "auto",
+              maxHeight: "85vh",
+              display: "flex",
+              flexDirection: "column",
               border: "2px solid #00d4ff",
               position: "relative",
             }}
@@ -1023,154 +676,156 @@ export default function FishNetDashboard() {
                 zIndex: 10,
                 boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.background = "#ff5c54")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.background = "#ff3b30")
-              }
             >
               ✕ Close
             </button>
 
-            <h2
-              style={{
-                color: "#00d4ff",
-                marginBottom: "25px",
-                fontSize: "2.2em",
-              }}
-            >
-              🚢 Vessel: {selectedVessel.mmsi}
-            </h2>
-
             <div
               style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                gap: "15px",
-                marginBottom: "30px",
+                flexShrink: 0,
+                marginBottom: "20px",
+                paddingTop: "20px",
               }}
             >
+              <h2
+                style={{
+                  color: "#00d4ff",
+                  marginBottom: "25px",
+                  fontSize: "2.2em",
+                }}
+              >
+                🚢 Vessel: {selectedVessel.mmsi}
+              </h2>
               <div
                 style={{
-                  background: "rgba(255, 255, 255, 0.05)",
-                  padding: "18px",
-                  borderRadius: "10px",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                  gap: "15px",
                 }}
               >
                 <div
                   style={{
-                    color: "#aaa",
-                    fontSize: "0.85em",
-                    marginBottom: "8px",
+                    background: "rgba(255, 255, 255, 0.05)",
+                    padding: "18px",
+                    borderRadius: "10px",
                   }}
                 >
-                  Vessel Name
+                  <div
+                    style={{
+                      color: "#aaa",
+                      fontSize: "0.85em",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Vessel Name
+                  </div>
+                  <div
+                    style={{
+                      color: "#fff",
+                      fontSize: "1.3em",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {selectedVessel.vessel_name || "Unknown"}
+                  </div>
                 </div>
                 <div
                   style={{
-                    color: "#fff",
-                    fontSize: "1.3em",
-                    fontWeight: "bold",
+                    background: "rgba(255, 255, 255, 0.05)",
+                    padding: "18px",
+                    borderRadius: "10px",
                   }}
                 >
-                  {selectedVessel.vessel_name || "Unknown"}
-                </div>
-              </div>
-
-              <div
-                style={{
-                  background: "rgba(255, 255, 255, 0.05)",
-                  padding: "18px",
-                  borderRadius: "10px",
-                }}
-              >
-                <div
-                  style={{
-                    color: "#aaa",
-                    fontSize: "0.85em",
-                    marginBottom: "8px",
-                  }}
-                >
-                  Type
-                </div>
-                <div
-                  style={{
-                    color: "#00ff88",
-                    fontSize: "1.3em",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {selectedVessel.is_fishing_vessel ? "🎣 Fishing" : "🚢 Other"}
-                </div>
-              </div>
-
-              <div
-                style={{
-                  background: "rgba(255, 255, 255, 0.05)",
-                  padding: "18px",
-                  borderRadius: "10px",
-                }}
-              >
-                <div
-                  style={{
-                    color: "#aaa",
-                    fontSize: "0.85em",
-                    marginBottom: "8px",
-                  }}
-                >
-                  Dark Events
+                  <div
+                    style={{
+                      color: "#aaa",
+                      fontSize: "0.85em",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Type
+                  </div>
+                  <div
+                    style={{
+                      color: "#00ff88",
+                      fontSize: "1.3em",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {selectedVessel.is_fishing_vessel
+                      ? "🎣 Fishing"
+                      : "🚢 Other"}
+                  </div>
                 </div>
                 <div
                   style={{
-                    color: "#ffa500",
-                    fontSize: "1.3em",
-                    fontWeight: "bold",
+                    background: "rgba(255, 255, 255, 0.05)",
+                    padding: "18px",
+                    borderRadius: "10px",
                   }}
                 >
-                  {selectedVessel.total_dark_events}
+                  <div
+                    style={{
+                      color: "#aaa",
+                      fontSize: "0.85em",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Dark Events
+                  </div>
+                  <div
+                    style={{
+                      color: "#ffa500",
+                      fontSize: "1.3em",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {selectedVessel.total_dark_events}
+                  </div>
                 </div>
-              </div>
-
-              <div
-                style={{
-                  background: "rgba(255, 255, 255, 0.05)",
-                  padding: "18px",
-                  borderRadius: "10px",
-                }}
-              >
                 <div
                   style={{
-                    color: "#aaa",
-                    fontSize: "0.85em",
-                    marginBottom: "8px",
+                    background: "rgba(255, 255, 255, 0.05)",
+                    padding: "18px",
+                    borderRadius: "10px",
                   }}
                 >
-                  Avg Suspicion
-                </div>
-                <div
-                  style={{
-                    color: "#ff3838",
-                    fontSize: "1.3em",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {selectedVessel.avg_suspicion_score?.toFixed(3)}
+                  <div
+                    style={{
+                      color: "#aaa",
+                      fontSize: "0.85em",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Avg Suspicion
+                  </div>
+                  <div
+                    style={{
+                      color: "#ff3838",
+                      fontSize: "1.3em",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {selectedVessel.avg_suspicion_score?.toFixed(3)}
+                  </div>
                 </div>
               </div>
             </div>
 
-            <h3
+            <div style={{ flexShrink: 0, marginBottom: "10px" }}>
+              <h3 style={{ color: "#00d4ff", fontSize: "1.5em" }}>
+                Event History ({selectedVessel.events?.length || 0})
+              </h3>
+            </div>
+
+            <div
               style={{
-                color: "#00d4ff",
-                marginBottom: "15px",
-                fontSize: "1.5em",
+                flex: 1,
+                overflowY: "auto",
+                minHeight: 0,
+                paddingRight: "5px",
               }}
             >
-              Event History ({selectedVessel.events?.length || 0})
-            </h3>
-
-            <div style={{ maxHeight: "350px", overflowY: "auto" }}>
               {selectedVessel.events?.map((event, idx) => (
                 <div
                   key={idx}

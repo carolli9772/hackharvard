@@ -25,14 +25,50 @@ def load_json_file(filename):
         return None
 
 
+# Calculate summary statistics from scored_dark_events
+def calculate_summary_stats(events):
+    """Calculate summary statistics from dark events."""
+    if not events:
+        return {}
+
+    fishing_events = [e for e in events if e.get('is_fishing_vessel', False)]
+    high_suspicion = [e for e in events if e.get('total_score', 0) >= 0.7]
+
+    # Calculate average duration
+    durations = [e.get('duration_hours', 0) for e in events if e.get('duration_hours')]
+    avg_duration = sum(durations) / len(durations) if durations else 0
+
+    # Count unique vessels
+    unique_vessels = len(set(e.get('mmsi') for e in events if e.get('mmsi')))
+
+    # Count hotspots (events in same grid cells)
+    grid_cells = set()
+    for event in events:
+        if event.get('location'):
+            lat, lon = event['location']
+            # Round to 1 degree grid
+            grid_id = f"{int(lat)},{int(lon)}"
+            grid_cells.add(grid_id)
+
+    return {
+        'total_dark_events': len(events),
+        'high_suspicion_events': len(high_suspicion),
+        'fishing_vessel_events': len(fishing_events),
+        'avg_duration_hours': round(avg_duration, 2),
+        'total_vessels_involved': unique_vessels,
+        'total_hotspots': len(grid_cells)
+    }
+
+
 # API Endpoints
 
 @app.route('/api/summary', methods=['GET'])
 def get_summary():
     """Get summary statistics of dark event analysis."""
-    package = load_json_file('frontend_data_package.json')
-    if package:
-        return jsonify(package['summary'])
+    events = load_json_file('scored_dark_events.json')
+    if events:
+        summary = calculate_summary_stats(events)
+        return jsonify(summary)
     return jsonify({'error': 'Data not available'}), 404
 
 
@@ -44,11 +80,9 @@ def get_suspicious_events():
     min_score = request.args.get('min_score', 0, type=float)
     fishing_only = request.args.get('fishing_only', 'false').lower() == 'true'
 
-    package = load_json_file('frontend_data_package.json')
-    if not package:
+    events = load_json_file('scored_dark_events.json')
+    if not events:
         return jsonify({'error': 'Data not available'}), 404
-
-    events = package['top_suspicious_events']
 
     # Apply filters
     if min_score > 0:
@@ -65,83 +99,89 @@ def get_suspicious_events():
         'events': events
     })
 
+@app.route('/api/suspicious-events/top', methods=['GET'])
+def get_top_suspicious_events():
+    """Get top suspicious events sorted by score for map display."""
+    limit = request.args.get('limit', 5000, type=int)
+
+    events = load_json_file('scored_dark_events.json')
+    if not events:
+        return jsonify({'error': 'Data not available'}), 404
+
+    # Sort by suspicion score (highest first)
+    events.sort(key=lambda x: x.get('total_score', 0), reverse=True)
+
+    # Apply limit
+    events = events[:limit]
+
+    return jsonify({
+        'count': len(events),
+        'events': events
+    })
 
 @app.route('/api/hotspots', methods=['GET'])
 def get_hotspots():
-    """Get dark zone hotspots (hexbin aggregation)."""
+    """Get dark zone hotspots (aggregated by grid cell)."""
     limit = request.args.get('limit', 20, type=int)
 
-    package = load_json_file('frontend_data_package.json')
-    if not package:
+    events = load_json_file('scored_dark_events.json')
+    if not events:
         return jsonify({'error': 'Data not available'}), 404
 
-    hotspots = package['dark_zone_hotspots'][:limit]
+    # Aggregate events by 1-degree grid cells
+    grid_map = {}
+    for event in events:
+        if not event.get('location'):
+            continue
+
+        lat, lon = event['location']
+        grid_lat = round(lat)
+        grid_lon = round(lon)
+        grid_id = f"{grid_lat},{grid_lon}"
+
+        if grid_id not in grid_map:
+            grid_map[grid_id] = {
+                'grid_id': grid_id,
+                'center': [grid_lat, grid_lon],
+                'event_count': 0,
+                'total_score': 0,
+                'vessels': set()
+            }
+
+        grid_map[grid_id]['event_count'] += 1
+        grid_map[grid_id]['total_score'] += event.get('total_score', 0)
+        if event.get('mmsi'):
+            grid_map[grid_id]['vessels'].add(event['mmsi'])
+
+    # Convert to list and calculate averages
+    hotspots = []
+    for grid_id, data in grid_map.items():
+        hotspots.append({
+            'grid_id': grid_id,
+            'center': data['center'],
+            'event_count': data['event_count'],
+            'avg_suspicion_score': round(data['total_score'] / data['event_count'], 3),
+            'unique_vessels': len(data['vessels'])
+        })
+
+    # Sort by event count
+    hotspots.sort(key=lambda x: x['event_count'], reverse=True)
 
     return jsonify({
-        'count': len(hotspots),
-        'hotspots': hotspots
-    })
-
-
-@app.route('/api/communities', methods=['GET'])
-def get_communities():
-    """Get suspicious vessel communities."""
-    limit = request.args.get('limit', 10, type=int)
-
-    package = load_json_file('frontend_data_package.json')
-    if not package:
-        return jsonify({'error': 'Data not available'}), 404
-
-    communities = package['suspicious_communities'][:limit]
-
-    return jsonify({
-        'count': len(communities),
-        'communities': communities
-    })
-
-
-@app.route('/api/coordinators', methods=['GET'])
-def get_coordinators():
-    """Get potential coordinator vessels (high betweenness centrality)."""
-    limit = request.args.get('limit', 20, type=int)
-
-    package = load_json_file('frontend_data_package.json')
-    if not package:
-        return jsonify({'error': 'Data not available'}), 404
-
-    coordinators = package['potential_coordinators'][:limit]
-
-    return jsonify({
-        'count': len(coordinators),
-        'coordinators': coordinators
-    })
-
-
-@app.route('/api/motherships', methods=['GET'])
-def get_motherships():
-    """Get potential mothership/transshipment vessels."""
-    package = load_json_file('frontend_data_package.json')
-    if not package:
-        return jsonify({'error': 'Data not available'}), 404
-
-    motherships = package['potential_motherships']
-
-    return jsonify({
-        'count': len(motherships),
-        'motherships': motherships
+        'count': len(hotspots[:limit]),
+        'hotspots': hotspots[:limit]
     })
 
 
 @app.route('/api/vessel/<int:mmsi>', methods=['GET'])
 def get_vessel_details(mmsi):
     """Get detailed information about a specific vessel."""
-    # Load scored events
-    dark_events = load_json_file('scored_dark_events.json')
-    if not dark_events:
+    events = load_json_file('scored_dark_events.json')
+    if not events:
         return jsonify({'error': 'Data not available'}), 404
 
     # Find all events for this vessel
-    vessel_events = [e for e in dark_events if e['mmsi'] == mmsi]
+    vessel_events = [e for e in events if e.get('mmsi') == mmsi]
 
     if not vessel_events:
         return jsonify({'error': 'Vessel not found'}), 404
@@ -161,44 +201,6 @@ def get_vessel_details(mmsi):
     return jsonify(vessel_info)
 
 
-@app.route('/api/clusters', methods=['GET'])
-def get_clusters():
-    """Get spatial clusters of dark events."""
-    clusters = load_json_file('dark_zone_clusters.json')
-    if not clusters:
-        return jsonify({'error': 'Data not available'}), 404
-
-    # Filter only hotspots
-    hotspots_only = request.args.get('hotspots_only', 'false').lower() == 'true'
-    if hotspots_only:
-        clusters = [c for c in clusters if c.get('is_hotspot', False)]
-
-    return jsonify({
-        'count': len(clusters),
-        'clusters': clusters
-    })
-
-
-@app.route('/api/network/stats', methods=['GET'])
-def get_network_stats():
-    """Get network analysis statistics."""
-    centrality = load_json_file('centrality_scores.json')
-    communities = load_json_file('vessel_communities.json')
-
-    if not centrality or not communities:
-        return jsonify({'error': 'Data not available'}), 404
-
-    stats = {
-        'total_vessels': len(centrality),
-        'total_communities': len(communities),
-        'avg_degree_centrality': round(sum(v['degree_centrality'] for v in centrality) / len(centrality), 4),
-        'avg_betweenness_centrality': round(sum(v['betweenness_centrality'] for v in centrality) / len(centrality), 4),
-        'suspicious_fleets': sum(1 for c in communities if c.get('is_suspicious_fleet', False))
-    }
-
-    return jsonify(stats)
-
-
 @app.route('/api/search', methods=['GET'])
 def search_events():
     """Search dark events by location, time, or vessel attributes."""
@@ -209,28 +211,40 @@ def search_events():
     start_date = request.args.get('start_date')
     end_date = request.args.get('end_date')
 
-    dark_events = load_json_file('scored_dark_events.json')
-    if not dark_events:
+    events = load_json_file('scored_dark_events.json')
+    if not events:
         return jsonify({'error': 'Data not available'}), 404
 
-    results = dark_events
+    results = events
 
     # Filter by location if provided
     if lat is not None and lon is not None:
-        from proximity_index import haversine_distance
+        def haversine_distance(lat1, lon1, lat2, lon2):
+            from math import radians, sin, cos, sqrt, atan2
+            R = 6371  # Earth radius in km
+
+            lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
+            dlat = lat2 - lat1
+            dlon = lon2 - lon1
+
+            a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+            c = 2 * atan2(sqrt(a), sqrt(1-a))
+
+            return R * c
+
         results = [
             e for e in results
-            if haversine_distance(lat, lon, e['location'][0], e['location'][1]) <= radius_km
+            if e.get('location') and haversine_distance(lat, lon, e['location'][0], e['location'][1]) <= radius_km
         ]
 
     # Filter by date range if provided
     if start_date:
         start = datetime.fromisoformat(start_date)
-        results = [e for e in results if datetime.fromisoformat(e['start']) >= start]
+        results = [e for e in results if e.get('start') and datetime.fromisoformat(e['start']) >= start]
 
     if end_date:
         end = datetime.fromisoformat(end_date)
-        results = [e for e in results if datetime.fromisoformat(e['end']) <= end]
+        results = [e for e in results if e.get('end') and datetime.fromisoformat(e['end']) <= end]
 
     return jsonify({
         'count': len(results),
@@ -265,12 +279,7 @@ if __name__ == '__main__':
     print("  GET /api/summary              - Summary statistics")
     print("  GET /api/suspicious-events    - Suspicious dark events")
     print("  GET /api/hotspots             - Dark zone hotspots")
-    print("  GET /api/communities          - Suspicious vessel communities")
-    print("  GET /api/coordinators         - Potential coordinator vessels")
-    print("  GET /api/motherships          - Potential mothership vessels")
     print("  GET /api/vessel/<mmsi>        - Vessel details")
-    print("  GET /api/clusters             - Spatial clusters")
-    print("  GET /api/network/stats        - Network statistics")
     print("  GET /api/search               - Search events")
     print("  GET /api/health               - Health check")
     print("\nPress Ctrl+C to stop\n")
