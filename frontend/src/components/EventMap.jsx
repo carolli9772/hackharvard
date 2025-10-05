@@ -325,9 +325,6 @@ export const EventMap = ({ events, hotspots, onEventClick }) => {
                 key={`event-${idx}`}
                 position={[event.location[0], event.location[1]]}
                 icon={getEventIcon(event)}
-                eventHandlers={{
-                  click: () => onEventClick && onEventClick(event),
-                }}
               >
                 <Popup>
                   <div style={{ color: "#000", minWidth: "200px" }}>
@@ -403,9 +400,10 @@ export const EventMap = ({ events, hotspots, onEventClick }) => {
                         cursor: "pointer",
                         width: "100%",
                         fontWeight: "bold",
+                        color: "#fff",
                       }}
                     >
-                      View Full Details
+                      View Full Vessel Details
                     </button>
                   </div>
                 </Popup>
