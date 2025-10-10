@@ -300,8 +300,6 @@ Generate compliance reports with evidence packages
 
 **Project:** FishNet - Detecting illegal fishing via AIS silence patterns
 
-Generated with [Claude Code](https://claude.com/claude-code)
-
 ---
 
 ## 🎓 Technical Stack
